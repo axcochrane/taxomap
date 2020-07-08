@@ -8,6 +8,7 @@
       <th>Type</th>
       <th>Created</th>
       <th>Updated</th>
+      <th>Edit</th>
     </tr>
   </thead>
   <% @instances.each do |i| %>
@@ -16,6 +17,7 @@
       <td><%= i.type.inspect %></td>
       <td><%= i.created_at.strftime('%e %b %Y') %></td>
       <td><%= i.updated_at.strftime('%e %b %Y %H:%M') %></td>
+      <td><%= link_to 'Edit', edit_instance_path(i) %></td>
     </tr>
   <% end %>
   </table>

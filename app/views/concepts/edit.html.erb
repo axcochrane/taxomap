@@ -1,5 +1,5 @@
 <section class='title-container'>
-  <h1>Concepts Edit Page</h1>
+  <h1 class='title-text'>Concepts Edit Page</h1>
 </section>
 <%= simple_form_for :concept, url: concept_path(@concept), method: 'PATCH', class: 'taxomap-form' do |f| %>
   <div class="form__label-row">
@@ -8,6 +8,14 @@
     </div>
     <div class="col">
       <%= f.input_field :title, placeholder: @concept.title, class: 'form__text-field' %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :parent, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.collection_select :parent, Concept.all, :uuid, :title, { :include_blank => true, selected: @concept&.parent&.uuid},  class: 'form__select'  %>
     </div>
   </div>
   <div class="form__label-row">
@@ -38,14 +46,6 @@
           </div>
         </div>
       <% end %>
-    </div>
-  </div>
-  <div class="form__label-row">
-    <div class="col">
-      <%= f.label :parent, class: 'form__label' %>
-    </div>
-    <div class="col">
-      <%= f.collection_select :parent, Concept.all, :uuid, :title, { :include_blank => true, selected: @concept&.parent&.uuid},  class: 'form__select'  %>
     </div>
   </div>
   <div class="form__label-row">

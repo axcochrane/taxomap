@@ -1,0 +1,21 @@
+<section class='title-container'>
+  <h1 class='title-text'>Property Edit Page</h1>
+</section>
+<%= simple_form_for :property, url: property_path(@property), method: 'PATCH', class: 'taxomap-form' do |f| %>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :title, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.input_field :title, placeholder: @property.title, class: 'form__text-field' %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <%= f.submit 'Update Concept', class: 'primary-button' %>
+    </div>
+  </div>
+<% end %>
+
