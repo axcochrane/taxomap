@@ -1,5 +1,6 @@
 <%= simple_form_for :concept, url: concepts_path, method: 'POST' do |f| %>
   <%= f.input :title %>
+  <%= f.input :parent %>
   <%= f.submit 'Create Concept' %>
 <% end %>
 

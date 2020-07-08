@@ -748,3 +748,19 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2020-07-08 11:51:54.719+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 29 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
 2020-07-08 11:51:54.732+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 29 checkpoint completed in 152ms
 2020-07-08 11:51:54.733+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2020-07-08 12:30:25.069+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 5131 seconds: MATCH (n:`Concept`) RETURN n
+2020-07-08 12:30:25.073+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 5131 seconds: MATCH (n:`Concept`) RETURN n
+2020-07-08 12:30:25.494+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 30 checkpoint started...
+2020-07-08 12:30:25.707+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 30 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
+2020-07-08 12:30:25.721+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 30 checkpoint completed in 227ms
+2020-07-08 12:30:25.721+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2020-07-08 13:43:17.228+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 31 checkpoint started...
+2020-07-08 13:43:17.346+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 31 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2020-07-08 13:43:17.359+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 31 checkpoint completed in 120ms
+2020-07-08 13:43:17.360+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2020-07-08 13:44:45.487+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 9597 seconds: MATCH (n:`Property`) RETURN n
+2020-07-08 13:44:45.488+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 9597 seconds: MATCH (n:`Property`) RETURN n
+2020-07-08 13:58:17.677+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 33 checkpoint started...
+2020-07-08 13:58:17.747+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 33 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
+2020-07-08 13:58:17.763+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 33 checkpoint completed in 75ms
+2020-07-08 13:58:17.764+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0

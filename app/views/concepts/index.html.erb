@@ -6,14 +6,18 @@
       <th>Created</th>
       <th>Updated</th>
       <th>Title</th>
+      <th>Parent</th>
+      <th>Properties</th>
     </tr>
   </thead>
   <% @concepts.each do |c| %>
     <tr>
-      <td><%= c.uuid %></td>
+      <td><%= link_to c.uuid, edit_concept_path(c) %></td>
       <td><%= c.created_at %></td>
       <td><%= c.updated_at %></td>
       <td><%= c.title %></td>
+      <td> parent </td>
+      <td><%= c.properties.pluck(:title) %></td>
     </tr>
   <% end %>
   </table>

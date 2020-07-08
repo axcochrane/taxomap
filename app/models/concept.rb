@@ -3,4 +3,6 @@ class Concept
   property :title, type: String
   property :created_at, type: DateTime
   property :updated_at, type: DateTime
+
+  has_many :in, :properties, type: :Property
 end

@@ -1,0 +1,22 @@
+<h1>Parents Index Page</h1>
+<table>
+  <thead> 
+    <tr>
+      <th>UUID</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>From Node</th>
+      <th>To Node</th>
+    </tr>
+  </thead>
+  <% @parents.each do |p| %>
+    <tr>
+      <td><%= link_to p.uuid, edit_parent_path(p) %></td>
+      <td><%= p.created_at %></td>
+      <td><%= p.updated_at %></td>
+      <td><%= p.from_node %></td>
+      <td><%= p.to_node %></td>
+    </tr>
+  <% end %>
+  </table>
+

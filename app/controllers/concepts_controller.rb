@@ -14,11 +14,42 @@ class ConceptsController < ApplicationController
     end
   end
 
+  def edit 
+    @concept = Concept.find(params[:id])
+  end
+
+  def update
+    @concept = Concept.find(params[:id])
+    # @parent = Concept.find(concept_params[:parent])
+    # @parent_rel = Parent.new(from_node: @concept, to_node: @parent)
+    @property = Property.find(concept_params[:properties])
+    @concept.properties << @property
+    p "paramz = #{params[:concept]}"
+    p "paramz2 = #{concept_params}"
+    p "paramz3 = #{concept_params[:properties]}"
+    p "paramz4 = #{@property.title}"
+
+    # p "parent = #{@parent.inspect}"
+    # p "concept = #{@concept.inspect}"
+    # p "property = #{@property.inspect}"
+    # p "parent rel = #{@parent_rel.inspect}"
+    
+    if @concept.save
+      flash.notice = 'Concept updated successfully'
+      redirect_to concepts_path
+    else
+      flash.alert = 'Error updating Concept'
+      redirect_to concepts_path
+    end
+  end
+
   private
 
   def concept_params
     params.require(:concept).permit(
-      :title
+      :title,
+      :parent,
+      :properties
     )
   end
 end

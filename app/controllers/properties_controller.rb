@@ -16,7 +16,7 @@ class PropertiesController < ApplicationController
 
   private
 
-  def property_path
+  def property_params
     params.require(:property).permit(
       :title
     )
