@@ -714,3 +714,9 @@ BatchingMultipleIndexPopulator{activeTasks=0, executor=java.util.concurrent.Thre
 2020-07-08 08:57:03.616+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Shutting down executor.
 BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.ThreadPoolExecutor@774ca6c7[Running, pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1], batchedUpdates = [0 updates], queuedUpdates = 0}
 2020-07-08 08:57:03.661+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population completed. Index [:Doc(uuid) [provider: {key=lucene+native, version=2.0}]] is POPULATING.
+2020-07-08 09:04:30.991+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 14 checkpoint started...
+2020-07-08 09:04:31.054+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 14 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2020-07-08 09:04:31.065+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 14 checkpoint completed in 72ms
+2020-07-08 09:04:31.066+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2020-07-08 09:18:12.962+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 1224 seconds: MATCH (n:`Doc`) RETURN n
+2020-07-08 09:18:12.964+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 1224 seconds: MATCH (n:`Doc`) RETURN n
