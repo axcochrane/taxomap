@@ -1,0 +1,127 @@
+.form__label-row{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1.8rem;
+  margin-bottom: 0.2em;
+
+  .form__label{
+    font-size: 0.85em;
+    font-weight: 500;
+		color: $mixpanel-text;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+}
+
+.form__label{
+  font-size: 0.85em;
+  font-weight: 500;
+	color: $mixpanel-text;
+  margin-top: 1.8rem;
+  margin-bottom: 0.2em;
+	text-transform: none;
+}
+
+.form__label-small-text{
+  font-size: 0.75em;
+  margin-left: 0.5em;
+  color: $grey;
+}
+
+.form__select{
+  margin-top: 0;
+	width: 100%;
+	padding: 0.8em;
+  font-weight: 400;
+	border-width: 1px;
+  border-radius: 3px;
+	border-style: solid;
+	border-color: #E5E5E5;
+  font-size: $medium-text;
+  background-color: white;
+	color: $mauve;
+	line-height: 22px;
+}
+
+.form__text-field{
+  margin-top: 0;
+	height: 3.3em;
+	width: 100%;
+	padding: 1.3em;
+  font-weight: 400;
+	border-width: 1px;
+  border-radius: 3px;
+	border-style: solid;
+	border-color: #E5E5E5;
+  font-size: $medium-text;
+  background-color: white;
+	color: $mauve;
+	line-height: 22px;
+}
+
+.form__text-field::placeholder {
+  color: $light-grey
+}
+
+.form__text-area{
+  margin-top: 0;
+	height: 6em;
+	width: 100%;
+	padding: 1.3em;
+  font-weight: 400;
+	border-width: 1px;
+  border-radius: 3px;
+	border-style: solid;
+	border-color: #E5E5E5;
+  font-size: $medium-text;
+  background-color: white;
+	color: $mauve;
+	line-height: 22px;
+}
+
+.form__text-area::placeholder {
+  color: $light-grey
+}
+
+.form__select::placeholder {
+  color: $light-grey
+}
+
+.form__2-col-row {
+  display: grid;
+  grid-column-gap: 0.2em;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.modal.left .modal-footer,
+.modal.right .modal-footer {
+  position: fixed;
+	outline-color: transparent;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 70px;
+  border-top: 1;
+	// border-color: $light-grey;
+  padding: 0rem 2rem;
+	background-color: $mixpanel-light-blue;
+}
+
+.form__cancel-button{
+  float:right;
+	height: 42px;
+  margin-top: 3em;
+	box-shadow: none;
+}
+
+.form__primary-button{
+  float:right;
+	height: 42px;
+  margin-top: 3em;
+	box-shadow: none;
+	background-color: $synerise-blue;
+	border-color: $synerise-blue;
+}    

@@ -1,0 +1,58 @@
+$tiny-shadow: 0 2px 6px 0 rgba(41, 70, 97, 0.09);
+$tiny-shadow-hover: 0px 3px 8px 0px #CCC;
+$subtle-shadow: 0px 5px 25px 0px #EEEEEE;
+$subtle-shadow-hover: 0px 10px 25px 10px #DDDDDD;
+$shadow: 0px 5px 10px 8px #EEE;
+$shadow-hover: 0px 5px 10px 2px #CCC;
+$medium-shadow: 0px 5px 7px 1px #CCC;
+$medium-shadow-hove: 0px 5px 15px 1px #CCC;
+$strong-shadow: 0px 6px 25px 5px #DDDDDD;
+$slight-shadow: 0 2px 6px 0 rgba(41, 70, 97, 0.09);
+$border-shadow: 0px 0px 2px 0px #EEEEEE;
+$bottom-shadow: 1px 0px 1px 1px #E6E6E6;
+$button-shadow: 0px 2px 7px 2px #ccc;
+$large-button-shadow: 0px 5px 12px 3px #ccc;
+$large-button-shadow-hover: 0px 7px 16px 6px #ccc;
+$modal-shadow: 0px 0px 10px 3px #CCC;
+$card-shadow: 0px 3px 15px 1px #EEE;
+$hover-lift: translateY(-5px);
+$hover-lift-tiny: translateY(-2px);
+$slight-shadow--reverse: 0 -2px -6px 0 rgba(41, 70, 97, 0.09);
+$topbar-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.2);
+
+@mixin slight-shadow {
+  box-shadow: 0px 3px 15px 1px #EEE;
+}
+
+@mixin shadow {
+  box-shadow: 
+    0px 5px 7px rgba(163, 177, 198, 7),
+    0px 10px 15px rgba(163, 177, 198, 0.5),
+    0px 20px 30px rgba(163, 177, 198, 0.3),
+}
+
+@mixin neumorph-inset {
+  box-shadow: 
+    inset 2px 2px 3px 1px rgba(163, 177, 198, 0.2),
+    inset 5px 5px 4px 1px rgba(163, 177, 198, 0.1),
+    inset -3px -3px 5px 1px rgba(255, 255, 255, 0.6),
+    inset -7px -7px 9px 1px rgba(255, 255, 255, 0.3),
+}
+
+@mixin neumorph {
+  box-shadow: 
+    3px 3px 4px rgba(163, 177, 198, 0.2),
+    6px 6px 5px rgba(163, 177, 198, 0.2),
+    10px 10px 7px rgba(163, 177, 198, 0.1),
+    -4px -4px 4px rgba(255, 255, 255, 0.5),
+    -4px -4px 7px rgba(255, 255, 255, 0.4)
+}
+
+@mixin neumorph-med {
+  box-shadow: 
+    3px 3px 4px rgba(163, 177, 198, 0.2),
+    6px 6px 5px rgba(163, 177, 198, 0.2),
+    10px 10px 7px rgba(163, 177, 198, 0.1),
+    -2px -2px 2px rgba(255, 255, 255, 0.3)
+}
+

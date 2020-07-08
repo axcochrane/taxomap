@@ -812,3 +812,7 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2020-07-08 17:16:12.401+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 53 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
 2020-07-08 17:16:12.406+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 53 checkpoint completed in 67ms
 2020-07-08 17:16:12.407+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2020-07-08 17:31:12.693+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 55 checkpoint started...
+2020-07-08 17:31:12.768+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 55 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2020-07-08 17:31:12.790+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 55 checkpoint completed in 85ms
+2020-07-08 17:31:12.790+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0

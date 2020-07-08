@@ -1,0 +1,50 @@
+$teal: #00D0D2;
+$grey-blue: #B1C7E5;
+$pastel-teal: #89DEDE;
+$menu-blue: #4D83FB;
+$purple-charcoal: #292F4D;
+$royal-blue: #0131F5;
+$grey: #A9ACB7;
+$light-grey: #E3E3E5;
+$old-arsenic: #484848;
+$bg-grey: #FDFDFD;
+$light-grey: #D6D6D6;
+$subtitle-grey: #9A9A9A;
+$bright-green: #6EEEB9;
+
+$mauve: #7F8F9F;
+$black: #25304A;
+$blue: #385FFB;
+$grey: #B1B7BF;
+$arsenic: #3B4555;
+$light-blue: #EDEEFD;
+$mixpanel-light-blue: #F4F9FD;
+$mixpanel-blue: #4384FB;
+$mixpanel-text: #4C6071;
+$mixpanel-grey: #BDC8D7;
+$synerise-teal: #4384FB;
+$synerise-purple: #8E54E1;
+$synerise-orange: #F49E31;
+$synerise-blue: #0F67FB;
+$synerise-red: #ED4630;
+$synerise-light-red: #FCECE8;
+$synerise-yellow: #F7B732;
+$bg-blue: #E9F0FE;
+$bg-teal: #e5f8f8;
+$bg-green: #F4FBF8;
+$bg-green-2: #D0F1F0;
+$bg-green-3: #EEFAFA;
+$menu-blue: #5987F3;
+$border-grey: #F5F5F5;
+$green: #5ECD96;
+$green-2: #86DCD8;
+
+@mixin hero-gradient {
+  background-image:
+  radial-gradient(
+    480px circle at 75% 55%, 
+    #fff 40%, 
+    #e5f8f8)
+}
+
+

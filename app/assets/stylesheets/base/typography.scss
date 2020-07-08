@@ -1,0 +1,77 @@
+$small-text: 0.6rem; 
+$medium-text: 0.8rem; 
+$medium-large-text: 1.2rem;
+$large-text: 1.5rem; 
+$extra-large-text: 2.5rem; 
+
+@mixin medium-text {
+  font-size: $medium-text;
+  color: $grey;
+  font-weight: 400;
+}
+
+@mixin subtitle {
+  font-size: $medium-text;
+  color: $arsenic;
+  font-weight: 400;
+}
+
+@mixin card-title {
+  font-size: $medium-large-text;
+  color: $arsenic;
+  font-weight: 400;
+  line-height: 1.15em;
+}
+
+@mixin title {
+  font-size: $large-text;
+  color: $arsenic;
+  font-weight: 300;
+}
+
+@mixin hero-text {
+  font-size: $extra-large-text;
+  color: $arsenic;
+  font-weight: 400;
+}
+
+@mixin paragraph-text {
+  font-size: $medium-large-text;
+  color: $mauve;
+  line-height: 1.6em;
+  margin-top: 0.5em;
+}
+
+@mixin body-text {
+  font-size: 1.0rem;
+  color: $mauve;
+  line-height: 1.6em;
+  margin-top: 0.5em;
+}
+
+.paragraph-text {
+  font-size: $medium-large-text;
+  color: $mauve;
+  line-height: 1.6em;
+  margin-top: 0.5em;
+}
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,300,400,500,600,700&display=swap');
+
+.label-text{
+  @include medium-text;
+}
+
+.answer-text{
+  @include medium-text;
+  color: $arsenic
+}
+
+span.thick-underline {
+  background-image: linear-gradient(to right, $bright-green 50%, $bright-green 50%);
+  background-origin: 0;
+  background-repeat: repeat-x;
+  background-size: 100% 20%;
+  background-position: 100% 100%;
+}
+

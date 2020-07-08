@@ -2,28 +2,33 @@
 <%= simple_form_for :concept, url: concept_path(@concept), method: 'PATCH' do |f| %>
   <div class="row">
     <div class="col">
-      <%= f.label :title %>
+      <%= f.label :title, class: 'form__label' %>
     </div>
     <div class="col">
-      <%= f.input_field :title, placeholder: @concept.title %>
+      <%= f.input_field :title, placeholder: @concept.title, class: 'form__text-field' %>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <%= f.label :properties %>
+      <%= f.label :properties, class: 'form__label' %>
     </div>
     <div class="col">
-      <%= f.input_field :has_properties %>
+      <%= f.input_field :has_properties, class: 'form__text-field'  %>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <%= f.label :parent %>
+      <%= f.label :parent, class: 'form__label' %>
     </div>
     <div class="col">
-      <%= f.collection_select :parent, Concept.all, :uuid, :title, {selected: @concept.parent.uuid} %>
+      <%= f.collection_select :parent, Concept.all, :uuid, :title, {selected: @concept.parent.uuid}, class: 'form__select'  %>
     </div>
   </div>
   <div class="row">
-  <%= f.submit 'Update Concept' %>
+    <div class="col">
+    </div>
+    <div class="col">
+      <%= f.submit 'Update Concept', class: 'primary-button' %>
+    </div>
+  </div>
 <% end %>
