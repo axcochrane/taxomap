@@ -51,7 +51,7 @@ class ConceptsController < ApplicationController
     params.require(:concept).permit(
       :title,
       :parent,
-      :properties
+      :has_properties
     )
   end
 end

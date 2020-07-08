@@ -1,7 +1,29 @@
 <h1>Concepts Edit Page</h1>
 <%= simple_form_for :concept, url: concept_path(@concept), method: 'PATCH' do |f| %>
-  <%= f.input :title, placeholder: @concept.title %>
-  <%# <%= f.input :properties %1> %>
-  <%= f.input :parent, placeholder: @concept.parent %>
+  <div class="row">
+    <div class="col">
+      <%= f.label :title %>
+    </div>
+    <div class="col">
+      <%= f.input_field :title, placeholder: @concept.title %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <%= f.label :properties %>
+    </div>
+    <div class="col">
+      <%= f.input_field :has_properties %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <%= f.label :parent %>
+    </div>
+    <div class="col">
+      <%= f.collection_select :parent, Concept.all, :uuid, :title, {selected: @concept.parent.uuid} %>
+    </div>
+  </div>
+  <div class="row">
   <%= f.submit 'Update Concept' %>
 <% end %>

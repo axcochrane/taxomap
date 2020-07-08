@@ -4,6 +4,6 @@ class Property
   property :created_at, type: DateTime
   property :updated_at, type: DateTime
 
-  has_many :out, :properties, type: :Property
+  # has_many :out, :properties, type: :Property
 end
 
