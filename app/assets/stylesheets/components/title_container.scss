@@ -1,0 +1,54 @@
+.title-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  padding: 1.5rem 2rem 2rem 0rem;
+}
+
+.title-container--narrow {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
+  ". titleText .";
+  width: 100%;
+  padding: 2rem 2rem 1.3rem 2rem;
+
+  .title-container__text{
+    grid-area: titleText;
+    justify-self: start;
+    font-size: 26px;
+    font-weight: 300;
+    margin: 0
+  }
+}
+
+.title-container__text{
+  justify-self: start;
+	font-size: 26px;
+	font-weight: 300;
+  margin: 0
+}
+
+.title-container__tooltip{
+  justify-self: end;
+	width: 2em;
+	height: 2em;
+  font-size: 0.8em;
+	border-radius: 50%;
+	border-width: 1px;
+  border-style: solid;
+	border-color: #1377B6;
+	background: #EAF5FC;
+	cursor: pointer;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-container__button-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0.5rem;
+  justify-self: end;
+}
+

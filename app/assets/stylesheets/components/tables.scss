@@ -1,0 +1,47 @@
+.table-container {
+  padding: 0 2rem 1rem 2rem;
+}
+
+.data-table{
+  margin-top: -20px;
+  font-size: 0.8em;
+  font-weight: 400;
+  border-radius: 6px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #D6D6D6;
+  background-color: white;
+  background-color: transparent;
+}
+
+table thead.data-table__header {
+  border-radius: 6px 6px 0 0;
+}
+
+table thead.data-table__header th {
+  color: $mauve;
+  border-top: 0px;
+  border-bottom: 0px;
+  font-weight: 400;
+}
+
+.data-table__row {
+  font-weight: 400;
+  color: $mauve;
+  border-color: $border-grey;
+}
+
+.data-table__row-name{
+  color: $mauve
+}
+
+.data-table__row-employees{
+  font-weight: 300
+}
+
+.data-table__cell-menu-button{
+  text-align: center;
+  color: $blue;
+  font-weight: 300;
+  display: grid;
+}

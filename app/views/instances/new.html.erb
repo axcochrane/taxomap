@@ -1,0 +1,9 @@
+<section class='title-container'>
+  <h1>New Instances Page</h1>
+</section>
+<%= simple_form_for :instance, url: instances_path, method: 'POST' do |i| %>
+  <%= i.type 'test' %>
+  <%= i.submit 'Create Concept' %>
+<% end %>
+
+

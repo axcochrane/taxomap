@@ -1,0 +1,38 @@
+<div class="sidebar"><!-- Sidebar -->
+  <ul class='sidebar__menu'>
+    <%= link_to concepts_path, class: "sidebar__menu-link" do %>
+      <li class="sidebar__menu-item">
+        <span class="lnr lnr-magnifier sidebar__menu-icon"></span>
+        <span class='sidebar__menu-title'>Concepts</span>
+      </li>
+    <% end %>
+
+    <%= link_to properties_path, class: "sidebar__menu-link" do %>
+      <li class="sidebar__menu-item">
+        <span class="lnr lnr-list sidebar__menu-icon"></span>
+        <span class='sidebar__menu-title'>Properties</span>
+      </li>
+    <% end %>
+
+    <%= link_to instances_path, class: "sidebar__menu-link", id: "dashboardSidebarCampaigns"  do %>
+      <li class="sidebar__menu-item ">
+        <span class="lnr lnr-briefcase sidebar__menu-icon"></span>
+        <span class='sidebar__menu-title'>Instances</span>
+      </li>
+  <% end %>
+
+    <%= link_to values_path, class: "sidebar__menu-link" do %>
+      <li class="sidebar__menu-item ">
+        <span class="lnr lnr-users sidebar__menu-icon"></span>
+        <span class='sidebar__menu-title'>Values</span>
+      </li>
+    <% end %>
+
+  </div>
+</div>
+
+
+
+
+
+

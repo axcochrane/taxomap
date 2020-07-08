@@ -1,0 +1,80 @@
+.sidebar {
+  display: grid;
+  grid-template-rows: 1fr 120px;
+  padding-top: 20px;
+  background-color: white;
+  border-width: 0 1px 0 0;
+  border-color: $border-grey;
+  border-style: solid;
+  height: 100vh;
+}
+
+.sidebar__menu {
+  padding-top: 0.5rem;
+  padding-left: 2.5rem;
+  list-style-type: none;
+}
+
+.sidebar__menu-header {
+  margin-top: 2.2em;
+  color: $arsenic;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.sidebar__menu-item {
+  margin-top: 0.8em;
+  color: $grey;
+  display: grid;
+  grid-template-columns: [icon] 25px [title] 1fr;
+  align-items: center;
+  transition: 0.3s ease;
+}
+.sidebar__menu-item:hover {
+  color: $blue
+}
+
+.sidebar__menu-title:hover {
+  text-decoration: none;
+}
+
+.sidebar__menu-link:hover {
+  text-decoration: none;
+}
+
+.sidebar__menu-icon {
+  font-size: 0.9em;
+}
+
+.sidebar__menu-title {
+  padding-top: 0.05em;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.sidebar-mob {
+  display:none;
+}
+
+.callback-widget__container{
+  height: 60px;
+  width: 220px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.callback-widget:hover {
+  opacity: 0.7;
+  color: white;
+  text-decoration: none;
+}
+
+.callback-widget__text {
+  font-size: 0.9em;
+}
+
+.callback-widget__icon {
+  font-size: 1.4em;
+}
+

@@ -1,0 +1,22 @@
+<section class='title-container'>
+  <h1 class='title-text'>Instances Index Page</h1>
+</section>
+<section class='table'>
+<table class='data-table'>
+  <thead class='data-table__header'> 
+      <th>UUID</th>
+      <th>Type</th>
+      <th>Created</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <% @instances.each do |i| %>
+    <tr class='data-table__row'>
+      <td><%= truncate(i.uuid, length: 20) %></td>
+      <td><%= i.type.inspect %></td>
+      <td><%= i.created_at.strftime('%e %b %Y') %></td>
+      <td><%= i.updated_at.strftime('%e %b %Y %H:%M') %></td>
+    </tr>
+  <% end %>
+  </table>
+</section>

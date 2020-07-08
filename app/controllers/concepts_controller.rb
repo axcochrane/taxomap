@@ -22,11 +22,15 @@ class ConceptsController < ApplicationController
     @concept = Concept.find(params[:id])
     @parent = Concept.find(concept_params[:parent])
     @properties = concept_params[:properties]
+    @concepts = concept_params[:concepts]
+    @instances = concept_params[:instances]
 
     p "paramz = #{params[:concept]}"
     p "paramz2 = #{concept_params}"
     p "paramz3 = #{concept_params[:properties]}"
     p "paramz4 = #{concept_params[:parent]}"
+    p "paramz5 = #{concept_params[:concepts]}"
+    p "paramz6 = #{concept_params[:instances]}"
 
     p "parent = #{@parent.title}"
     p "concept = #{@concept.inspect}"
@@ -34,10 +38,18 @@ class ConceptsController < ApplicationController
     p "parent rel = #{@parent_rel.inspect}"
 
     @concept.parent = @parent
+
     @properties.reject(&:blank?).each do |prop_id|
       prop = Property.find(prop_id)
       p "adding property = #{prop.inspect}"
+      @concept.properties = []
       @concept.properties << prop 
+    end
+
+    @concepts.reject(&:blank?).each do |concept_id|
+      concept = Concept.find(concept_id)
+      p "adding property = #{concept.inspect}"
+      @concept.concepts << concept 
     end
     
     if @concept.save
@@ -55,9 +67,9 @@ class ConceptsController < ApplicationController
     params.require(:concept).permit(
       :title,
       :parent,
-      :properties,
-      properties: {},
-      properties: [] 
+      properties: [],
+      concepts: [],
+      instances: [] 
     )
   end
 end

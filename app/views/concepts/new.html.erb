@@ -1,7 +1,60 @@
+<section class='title-container'>
+  <h1>New Concepts Page</h1>
+</section>
 <%= simple_form_for :concept, url: concepts_path, method: 'POST' do |f| %>
-  <%= f.input :title %>
-  <%= f.input :parent %>
-  <%= f.submit 'Create Concept' %>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :title, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.input_field :title, placeholder: 'e.g. Book', class: 'form__text-field' %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :properties, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.collection_check_boxes :properties, Property.all, :uuid, :title do |b| %>
+        <div class="row">
+          <div class="col">
+            <%= b.check_box %>
+            <%= b.label(class: 'form__checkbox-label') %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :concepts, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.collection_check_boxes :concepts, Concept.all, :uuid, :title do |b| %>
+        <div class="row">
+          <div class="col">
+            <%= b.check_box %>
+            <%= b.label(class: 'form__checkbox-label') %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :parent, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.collection_select :parent, Concept.all, :uuid, :title, {:prompt => true}, class: 'form__select'  %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <%= f.submit 'Update Concept', class: 'primary-button' %>
+    </div>
+  </div>
 <% end %>
 
 

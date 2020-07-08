@@ -1,0 +1,129 @@
+.topbar {
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  display: grid;
+  grid-template-columns: [logobox] 220px [breadcrumbs] 1fr [avatar-container] 1fr;
+  align-items: center;
+  padding: 0 2.5rem 0 0;
+  background-color: $menu-blue;
+  border-style: solid;
+  border-width: 0 0 0px 0;
+  border-color: #F5F5F5;
+  box-shadow: $topbar-shadow;
+}
+
+.logobox {
+  width: 220px;
+  padding-left: 2.5rem;
+}
+
+.logobox * {
+  color: $bg-blue;
+}
+
+.logobox__logo {
+  display: grid;
+  justify-content: start;
+  grid-template-columns: auto auto;
+  transition: 0.3s ease;
+  &:hover {
+    text-decoration:none;
+    opacity: 0.5;
+  }
+}
+
+.logobox__logo-mark {
+  padding-left: 5px;
+  font-size: 1.37em;
+  font-weight: 900;
+}
+
+.logobox__logo-text {
+  padding: 0;
+  font-family: Rubik;
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.breadcrumbs-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: center;
+  padding-left: 2rem;
+  letter-spacing: 8px;
+	color: $bg-blue;
+  font-weight: 400;
+}
+
+.breadcrumbs-container__icon{
+  font-weight: 400;
+  font-size: 1em;
+  margin-right: 0.6em;
+}
+
+.breadcrumbs-container__text{
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.breadcrumbs a{
+  font-weight: 400;
+	color: $bg-blue;
+	text-decoration: none;
+  letter-spacing: 0px;
+
+  &:hover{
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+.breadcrumbs .current{
+	color: $bg-blue;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+.avatar-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: end;
+  align-items: center;
+  color: #D6D6D6; 
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.avatar-container__icon {
+  margin-right: 0.4em;
+  width: 2em;
+  height: 2em;
+  display: grid;
+  background-color: $bg-blue;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.avatar-container__initial {
+  align-self: center;
+  justify-self: center;
+  font-size: 1em;
+  color: $blue;
+  font-weight: 400;
+}
+
+.avatar-container__logout-icon {
+  font-size: 20px;
+  margin-right: 0.6em;
+  color: $bg-blue;
+}
+
+.avatar-container__email{
+  margin-left: 0.5rem;
+  color: $bg-blue;
+}
+

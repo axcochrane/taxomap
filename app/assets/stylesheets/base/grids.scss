@@ -1,0 +1,28 @@
+.dashboard-page{
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 220px 1fr;
+  grid-template-areas:
+  "topbar topbar"
+  "sidebar main";
+  height: 100vh;
+}
+
+.topbar{
+  grid-area: topbar
+}
+
+.sidebar {
+  grid-area: sidebar;
+  position: fixed;
+  width: 220px;
+  top: 50px;
+  height: 100%;
+}
+
+.main{
+  grid-area: main;
+  background-color: #FDFDFD;
+	padding: 1rem 3rem
+}
+

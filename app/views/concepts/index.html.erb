@@ -1,24 +1,30 @@
-<h1>Concepts Index Page</h1>
-<table>
-  <thead> 
-      <th>UUID</th>
+<section class='title-container'>
+  <h1 class='title-text'>Concepts Index Page</h1>
+</section>
+<section class='table'>
+<table class='data-table'>
+  <thead class='data-table__header'> 
+      <th>Title</th>
       <th>Created</th>
       <th>Updated</th>
-      <th>Title</th>
       <th>Parent</th>
       <th>Properties</th>
+      <th>Concepts</th>
+      <th>Instances</th>
+      <th>Edit</th>
     </tr>
   </thead>
   <% @concepts.each do |c| %>
-    <tr>
-      <td><%= link_to c.uuid, edit_concept_path(c) %></td>
-      <td><%= c.created_at %></td>
-      <td><%= c.updated_at %></td>
+    <tr class='data-table__row'>
       <td><%= c.title %></td>
+      <td><%= c.created_at.strftime('%e %b %Y') %></td>
+      <td><%= c.updated_at.strftime('%e %b %Y %H:%M') %></td>
       <td><%= c.parent&.title %></td>
-      <td><%= c.properties.pluck(:title) %></td>
-      <%# <td><%= c.has_children&.pluck(:title) %1></td> %>
-      <%# <td><%= c.properties.pluck(:title) %1></td> %>
+      <td><%= c.properties.pluck(:title).join(', ') %></td>
+      <td><%= truncate(c.concepts.pluck(:title).join(', '), length: 20) %></td>
+      <td><%= truncate(c.instances.inspect, length: 20) %></td>
+      <td><%= link_to 'Edit', edit_concept_path(c) %></td>
     </tr>
   <% end %>
   </table>
+</section>

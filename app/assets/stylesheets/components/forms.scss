@@ -6,9 +6,9 @@
 
 .form__label-row{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 4fr;
   justify-content: start;
-  align-items: center;
+  align-items: top;
   margin-top: 1.8rem;
   margin-bottom: 0.2em;
 

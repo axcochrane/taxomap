@@ -1,7 +1,10 @@
-<h1>Properties Index Page</h1>
-<table>
-  <thead> 
-    <tr>
+<section class='title-container'>
+  <h1 class='title-text'>Properties Index Page</h1>
+</section>
+<section class='table'>
+<table class='data-table'>
+  <thead class='data-table__header'> 
+    <tr class='data-table__row'>
       <th>UUID</th>
       <th>Created</th>
       <th>Updated</th>
@@ -9,10 +12,10 @@
     </tr>
   </thead>
   <% @properties.each do |p| %>
-    <tr>
-      <td><%= p.uuid %></td>
-      <td><%= p.created_at %></td>
-      <td><%= p.updated_at %></td>
+    <tr class='data-table__row'>
+      <td><%= truncate(p.uuid, length: 20) %></td>
+      <td><%= p.created_at.strftime('%e %b %Y') %></td>
+      <td><%= p.updated_at.strftime('%e %b %Y %H:%M') %></td>
       <td><%= p.title %></td>
     </tr>
   <% end %>

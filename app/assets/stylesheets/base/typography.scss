@@ -23,7 +23,7 @@ $extra-large-text: 2.5rem;
   line-height: 1.15em;
 }
 
-@mixin title {
+@mixin title-text {
   font-size: $large-text;
   color: $arsenic;
   font-weight: 300;
@@ -60,6 +60,10 @@ $extra-large-text: 2.5rem;
 
 .label-text{
   @include medium-text;
+}
+
+.title-text{
+  @include title-text;
 }
 
 .answer-text{
