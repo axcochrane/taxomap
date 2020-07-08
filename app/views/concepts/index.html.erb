@@ -1,0 +1,19 @@
+<h1>Concepts Index Page</h1>
+<table>
+  <thead> 
+    <tr>
+      <th>UUID</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <% @concepts.each do |c| %>
+    <tr>
+      <td><%= c.uuid %></td>
+      <td><%= c.created_at %></td>
+      <td><%= c.updated_at %></td>
+      <td><%= c.title %></td>
+    </tr>
+  <% end %>
+  </table>

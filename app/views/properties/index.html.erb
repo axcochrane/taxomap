@@ -1,0 +1,20 @@
+<h1>Properties Index Page</h1>
+<table>
+  <thead> 
+    <tr>
+      <th>UUID</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <% @properties.each do |p| %>
+    <tr>
+      <td><%= p.uuid %></td>
+      <td><%= p.created_at %></td>
+      <td><%= p.updated_at %></td>
+      <td><%= p.title %></td>
+    </tr>
+  <% end %>
+  </table>
+

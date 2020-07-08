@@ -1,0 +1,25 @@
+<h1>Relationships Index Page</h1>
+<table>
+  <thead> 
+    <tr>
+      <th>UUID</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Title</th>
+      <th>FromClass</th>
+      <th>ToClass</th>
+    </tr>
+  </thead>
+  <% @relationships.each do |r| %>
+    <tr>
+      <td><%= r.uuid %></td>
+      <td><%= r.created_at %></td>
+      <td><%= r.updated_at %></td>
+      <td><%= r.title %></td>
+      <td><%= r.from_class %></td>
+      <td><%= r.to_class %></td>
+    </tr>
+  <% end %>
+  </table>
+
+
