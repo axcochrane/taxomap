@@ -1,6 +1,6 @@
 <h1>Concepts Edit Page</h1>
-<%= simple_form_for :concept, url: concept_path(@concept), method: 'PATCH' do |f| %>
-  <div class="row">
+<%= simple_form_for :concept, url: concept_path(@concept), method: 'PATCH', class: 'taxomap-form' do |f| %>
+  <div class="form__label-row">
     <div class="col">
       <%= f.label :title, class: 'form__label' %>
     </div>
@@ -8,23 +8,33 @@
       <%= f.input_field :title, placeholder: @concept.title, class: 'form__text-field' %>
     </div>
   </div>
-  <div class="row">
+  <div class="form__label-row">
     <div class="col">
       <%= f.label :properties, class: 'form__label' %>
     </div>
     <div class="col">
-      <%= f.input_field :has_properties, class: 'form__text-field'  %>
+      <%# <%= f.input_field :has_properties, class: 'form__text-field'  %1> %>
+      <%# <%= f.collection_select :has_properties, Property.all, :uuid, :title, {}, mulitple: true,  class: 'form__select'  %1> %>
+      <%# <%= f.check_box :has_properties, { multiple: true } %>
+      <%= f.collection_check_boxes :properties, Property.all, :uuid, :title do |b| %>
+        <div class="row">
+          <div class="col">
+            <%= b.check_box %>
+            <%= b.label(class: 'form__checkbox-label') %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
-  <div class="row">
+  <div class="form__label-row">
     <div class="col">
       <%= f.label :parent, class: 'form__label' %>
     </div>
     <div class="col">
-      <%= f.collection_select :parent, Concept.all, :uuid, :title, {selected: @concept.parent.uuid}, class: 'form__select'  %>
+      <%= f.collection_select :parent, Concept.all, :uuid, :title, {selected: @concept.parent.uuid}, mulitple: true,  class: 'form__select'  %>
     </div>
   </div>
-  <div class="row">
+  <div class="form__label-row">
     <div class="col">
     </div>
     <div class="col">

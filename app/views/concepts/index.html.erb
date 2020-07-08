@@ -16,8 +16,8 @@
       <td><%= c.updated_at %></td>
       <td><%= c.title %></td>
       <td><%= c.parent&.title %></td>
+      <td><%= c.properties.pluck(:title) %></td>
       <%# <td><%= c.has_children&.pluck(:title) %1></td> %>
-      <td><%= c.has_properties.pluck(:title) %></td>
       <%# <td><%= c.properties.pluck(:title) %1></td> %>
     </tr>
   <% end %>
