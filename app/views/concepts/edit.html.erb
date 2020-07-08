@@ -1,6 +1,7 @@
 <h1>Concepts Edit Page</h1>
 <%= simple_form_for :concept, url: concept_path(@concept), method: 'PATCH' do |f| %>
   <%= f.input :title, placeholder: @concept.title %>
-  <%= f.input :properties, placeholder: @concept.property_ids %>
+  <%# <%= f.input :properties %1> %>
+  <%= f.input :parent, placeholder: @concept.parent %>
   <%= f.submit 'Update Concept' %>
 <% end %>

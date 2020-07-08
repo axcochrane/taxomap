@@ -764,3 +764,11 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2020-07-08 13:58:17.747+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 33 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
 2020-07-08 13:58:17.763+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 33 checkpoint completed in 75ms
 2020-07-08 13:58:17.764+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2020-07-08 14:13:18.110+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 35 checkpoint started...
+2020-07-08 14:13:18.156+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 35 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2020-07-08 14:13:18.170+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 35 checkpoint completed in 57ms
+2020-07-08 14:13:18.170+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2020-07-08 14:28:18.451+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 37 checkpoint started...
+2020-07-08 14:28:18.526+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 37 to [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/Users/sandy-cochrane/projects_2/taxomap/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
+2020-07-08 14:28:18.532+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 37 checkpoint completed in 70ms
+2020-07-08 14:28:18.532+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0

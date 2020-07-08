@@ -1,7 +1,6 @@
 <h1>Concepts Index Page</h1>
 <table>
   <thead> 
-    <tr>
       <th>UUID</th>
       <th>Created</th>
       <th>Updated</th>
@@ -16,8 +15,8 @@
       <td><%= c.created_at %></td>
       <td><%= c.updated_at %></td>
       <td><%= c.title %></td>
-      <td> parent </td>
-      <td><%= c.properties.pluck(:title) %></td>
+      <td><%= c.parent %></td>
+      <td><%= c.properties %></td>
     </tr>
   <% end %>
   </table>

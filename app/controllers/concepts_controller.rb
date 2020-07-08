@@ -20,19 +20,21 @@ class ConceptsController < ApplicationController
 
   def update
     @concept = Concept.find(params[:id])
-    # @parent = Concept.find(concept_params[:parent])
+    @parent = Concept.find(concept_params[:parent])
     # @parent_rel = Parent.new(from_node: @concept, to_node: @parent)
-    @property = Property.find(concept_params[:properties])
-    @concept.properties << @property
+    # @property = Property.find(concept_params[:properties])
+    # @concept.properties << @property
     p "paramz = #{params[:concept]}"
     p "paramz2 = #{concept_params}"
     p "paramz3 = #{concept_params[:properties]}"
-    p "paramz4 = #{@property.title}"
+    # p "paramz4 = #{@property.title}"
+    p "paramz5 = #{concept_params[:parent]}"
 
-    # p "parent = #{@parent.inspect}"
+    p "parent = #{@parent.title}"
     # p "concept = #{@concept.inspect}"
     # p "property = #{@property.inspect}"
     # p "parent rel = #{@parent_rel.inspect}"
+    @concept.parent = @parent
     
     if @concept.save
       flash.notice = 'Concept updated successfully'

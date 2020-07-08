@@ -4,5 +4,6 @@ class Concept
   property :created_at, type: DateTime
   property :updated_at, type: DateTime
 
+  has_one :in, :parent, type: :parent, model_class: :Concept
   has_many :in, :properties, type: :Property
 end
