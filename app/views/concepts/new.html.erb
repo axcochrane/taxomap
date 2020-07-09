@@ -12,6 +12,14 @@
   </div>
   <div class="form__label-row">
     <div class="col">
+      <%= f.label :parent, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.collection_select :parent, Concept.all, :uuid, :title, {:prompt => true}, class: 'form__select'  %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
       <%= f.label :properties, class: 'form__label' %>
     </div>
     <div class="col">
@@ -38,14 +46,6 @@
           </div>
         </div>
       <% end %>
-    </div>
-  </div>
-  <div class="form__label-row">
-    <div class="col">
-      <%= f.label :parent, class: 'form__label' %>
-    </div>
-    <div class="col">
-      <%= f.collection_select :parent, Concept.all, :uuid, :title, {:prompt => true}, class: 'form__select'  %>
     </div>
   </div>
   <div class="form__label-row">

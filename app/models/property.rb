@@ -7,6 +7,6 @@ class Property
   property :created_at, type: DateTime
   property :updated_at, type: DateTime
 
-  has_many :out, :values, type: :IS_A_VALUE_OF, model_class: [:Value, :StringValue, :DateTimeValue]
+  has_many :out, :values, type: :HAS_VALUE, model_class: [:Value, :StringValue, :DateTimeValue]
 end
 

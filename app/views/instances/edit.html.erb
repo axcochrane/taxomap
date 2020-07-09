@@ -1,20 +1,32 @@
 <section class='title-container'>
   <h1 class='title-text'>Instances Edit Page</h1>
 </section>
-<%= simple_form_for :instance, url: instance_path(@instance), method: 'PATCH', class: 'taxomap-form' do |f| %>
+<%= simple_form_for :instance, url: instance_path(@instance), method: 'PATCH', class: 'taxomap-form' do |i| %>
   <div class="form__label-row">
     <div class="col">
-      <%= f.label :type, class: 'form__label' %>
+      <%= i.label :concept_type, class: 'form__label' %>
     </div>
     <div class="col">
-      <%= f.collection_select :parent, Concept.all, :uuid, :title, { :include_blank => true, selected: @concept&.parent&.uuid},  class: 'form__select'  %>
+      <%= i.collection_select :concept_type, Concept.all, :uuid, :title, { include_blank: true, selected: @instance.concept_type.uuid}, disabled: true,  class: 'form__select'  %>
     </div>
   </div>
+  <% @instance.concept_type.properties.each do |prop| %>
+    <%= simple_fields_for :values do |v| %>
+      <div class="form__label-row">
+        <div class="col">
+          <%= v.label prop.title, class: 'form__label' %>
+        </div>
+        <div class="col">
+          <%= v.input_field prop.uuid, placeholder: 'Enter Data Here', class: 'form__text-field' %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
   <div class="form__label-row">
     <div class="col">
     </div>
     <div class="col">
-      <%= f.submit 'Edit Instance', class: 'primary-button' %>
+      <%= i.submit 'Edit Instance', class: 'primary-button' %>
     </div>
   </div>
 <% end %>

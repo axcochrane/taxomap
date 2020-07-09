@@ -15,6 +15,7 @@
       <th>Concepts</th>
       <th>Instances</th>
       <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
   <% @concepts.each do |c| %>
@@ -25,8 +26,9 @@
       <td><%= c.parent&.title %></td>
       <td><%= c.properties.pluck(:title).join(', ') %></td>
       <td><%= truncate(c.concepts.pluck(:title).join(', '), length: 20) %></td>
-      <td><%= truncate(c.instances.inspect, length: 20) %></td>
+      <td><%= c.instances.count %></td>
       <td><%= link_to 'Edit', edit_concept_path(c) %></td>
+      <td><%= link_to 'Delete', concept_path(c), method: 'DELETE' %></td>
     </tr>
   <% end %>
   </table>

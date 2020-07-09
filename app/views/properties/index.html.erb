@@ -14,6 +14,7 @@
       <th>Updated</th>
       <th>UUID</th>
       <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
   <% @properties.each do |p| %>
@@ -24,6 +25,7 @@
       <td><%= p.updated_at.strftime('%e %b %Y %H:%M') %></td>
       <td><%= truncate(p.uuid, length: 20) %></td>
       <td><%= link_to 'Edit', edit_property_path(p) %></td>
+      <td><%= link_to 'Delete', property_path(p), method: 'DELETE' %></td>
     </tr>
   <% end %>
   </table>

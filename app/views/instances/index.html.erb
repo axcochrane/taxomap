@@ -8,19 +8,23 @@
 <table class='data-table'>
   <thead class='data-table__header'> 
       <th>UUID</th>
-      <th>Type</th>
+      <th>Concept Type</th>
       <th>Created</th>
       <th>Updated</th>
+      <th>Values</th>
       <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
-  <% @instances.each do |i| %>
+  <% @instances.with_associations.each do |i| %>
     <tr class='data-table__row'>
       <td><%= truncate(i.uuid, length: 20) %></td>
-      <td><%= i.type.inspect %></td>
+      <td><%= i.concept_type.title  %></td>
       <td><%= i.created_at.strftime('%e %b %Y') %></td>
       <td><%= i.updated_at.strftime('%e %b %Y %H:%M') %></td>
+      <td><%= i.values.pluck(:data) %></td>
       <td><%= link_to 'Edit', edit_instance_path(i) %></td>
+      <td><%= link_to 'Delete', instance_path(i), method: 'DELETE' %></td>
     </tr>
   <% end %>
   </table>

@@ -1,9 +1,22 @@
 <section class='title-container'>
-  <h1>New Instances Page</h1>
+  <h1 class='title-text'>New Instance</h1>
 </section>
-<%= simple_form_for :instance, url: instances_path, method: 'POST' do |i| %>
-  <%= i.type 'test' %>
-  <%= i.submit 'Create Concept' %>
+<%= simple_form_for :instance, url: instances_path, method: 'POST' do |f| %>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :concept, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.collection_select :concept, Concept.all, :uuid, :title, {:prompt => true}, class: 'form__select'  %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <%= f.submit 'Create Instance', class: 'primary-button' %>
+    </div>
+  </div>
 <% end %>
 
 

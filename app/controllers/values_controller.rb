@@ -34,13 +34,27 @@ class ValuesController < ApplicationController
     end
   end
 
+  def destroy 
+    @value = Value.find(params[:id])
+    if @value.destroy
+      flash.notice = 'Value deleted successfully'
+      redirect_to values_path
+    else
+      flash.alert = 'Error deleting Value'
+      redirect_to values_path
+    end
+  end
+
   private
 
-  def value_params
-    params.require(:value).permit(
-      :uuid,
-      :type,
-      :data
+  def values_params
+    params.require(:values).permit(
+      property_fields
     )
   end
+
+  def property_fields
+    Property.all.pluck(:uuid)
+  end
+
 end

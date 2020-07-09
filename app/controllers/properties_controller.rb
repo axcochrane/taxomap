@@ -18,6 +18,18 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
   end
 
+  def destroy 
+    @property = Property.find(params[:id])
+    if @property.destroy
+      flash.notice = 'Property deleted successfully'
+      redirect_to properties_path
+    else
+      flash.alert = 'Error deleting Property'
+      redirect_to properties_path
+    end
+  end
+
+
   def update
     @property = Property.find(params[:id])
     @property.update_attributes(property_params)

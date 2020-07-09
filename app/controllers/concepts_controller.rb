@@ -17,6 +17,17 @@ class ConceptsController < ApplicationController
   def edit 
     @concept = Concept.find(params[:id])
   end
+  
+  def destroy 
+    @concept = Concept.find(params[:id])
+    if @concept.destroy
+      flash.notice = 'Concept deleted successfully'
+      redirect_to concepts_path
+    else
+      flash.alert = 'Error deleting Concept'
+      redirect_to concepts_path
+    end
+  end
 
   def update
     @concept = Concept.find(params[:id])
@@ -38,17 +49,16 @@ class ConceptsController < ApplicationController
     p "parent rel = #{@parent_rel.inspect}"
 
     @concept.parent = @parent
+    @concept.properties = []
+    @concept.concepts = []
 
     @properties.reject(&:blank?).each do |prop_id|
       prop = Property.find(prop_id)
-      p "adding property = #{prop.inspect}"
-      @concept.properties = []
       @concept.properties << prop 
     end
 
     @concepts.reject(&:blank?).each do |concept_id|
       concept = Concept.find(concept_id)
-      p "adding property = #{concept.inspect}"
       @concept.concepts << concept 
     end
     
