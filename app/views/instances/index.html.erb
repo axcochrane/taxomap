@@ -20,13 +20,13 @@
   </thead>
   <% @instances.each do |i| %>
     <tr class='data-table__row'>
-      <td><%= truncate(i.uuid, length: 20) %></td>
+      <td><%= truncate(i.uuid, length: 10) %></td>
       <td><%= i.concept_type&.title  %></td>
       <td><%= i.created_at.strftime('%e %b %Y') %></td>
       <td><%= i.updated_at.strftime('%e %b %Y %H:%M') %></td>
       <td><%= i.concept_type.properties.pluck(:title).join(', ') %></td>
-      <td><%= truncate(i.values.pluck(:data).join(',  '), length: 50) %></td>
-      <td><%= truncate(i.concept_type.concepts.pluck(:title).join(', '), length: 50) %></td>
+      <td><%= truncate(i.values.pluck(:data).join(',  '), length: 30) %></td>
+      <td><%= truncate(i.concept_type.concepts.pluck(:title).join(', '), length: 30) %></td>
       <td><%= link_to 'Edit', edit_instance_path(i) %></td>
       <td><%= link_to 'Delete', instance_path(i), method: 'DELETE' %></td>
     </tr>
