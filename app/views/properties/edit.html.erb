@@ -12,6 +12,14 @@
   </div>
   <div class="form__label-row">
     <div class="col">
+      <%= f.label :data_type, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%=  f.select :data_type, ['String', 'DateTime', 'Integer', 'Array', 'Text'], {}, class: 'form__select' %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
     </div>
     <div class="col">
       <%= f.submit 'Update Concept', class: 'primary-button' %>

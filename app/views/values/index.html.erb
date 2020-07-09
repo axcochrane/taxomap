@@ -1,0 +1,28 @@
+<section class='title-container'>
+  <h1 class='title-text'>Values Index Page</h1>
+  <div class='title-container__button-container'>
+    <%= button_to 'New Value', new_value_path, class: 'primary-button', method: :get %>
+  </div>
+</section>
+<section class='table'>
+<table class='data-table'>
+  <thead class='data-table__header'> 
+      <th>UUID</th>
+      <th>Type</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <% @values.each do |v| %>
+    <tr class='data-table__row'>
+      <td><%= truncate(v.uuid, length: 20) %></td>
+      <td><%= v.type.inspect %></td>
+      <td><%= v.created_at.strftime('%e %b %Y') %></td>
+      <td><%= v.updated_at.strftime('%e %b %Y %H:%M') %></td>
+      <td><%= link_to 'Edit', edit_value_path(v) %></td>
+    </tr>
+  <% end %>
+  </table>
+</section>
+

@@ -15,12 +15,20 @@
 - CONSTRAINT ON ( `neo4j::migrations::schemamigration`:`Neo4j::Migrations::SchemaMigration`
   ) ASSERT `neo4j::migrations::schemamigration`.migration_id IS UNIQUE
 - CONSTRAINT ON ( concept:Concept ) ASSERT concept.uuid IS UNIQUE
+- CONSTRAINT ON ( datetimevalue:DateTimeValue ) ASSERT datetimevalue.uuid IS UNIQUE
 - CONSTRAINT ON ( doc:Doc ) ASSERT doc.uuid IS UNIQUE
 - CONSTRAINT ON ( instance:Instance ) ASSERT instance.uuid IS UNIQUE
 - CONSTRAINT ON ( property:Property ) ASSERT property.uuid IS UNIQUE
-:indexes: []
+- CONSTRAINT ON ( stringvalue:StringValue ) ASSERT stringvalue.uuid IS UNIQUE
+- CONSTRAINT ON ( value:Value ) ASSERT value.uuid IS UNIQUE
+:indexes:
+- INDEX ON :Property(data_type)
 :versions:
 - '20200708085638'
 - '20200708104150'
 - '20200708110414'
 - '20200708202840'
+- '20200708225501'
+- '20200708232651'
+- '20200708232701'
+- '20200708233651'

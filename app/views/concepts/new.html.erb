@@ -1,5 +1,5 @@
 <section class='title-container'>
-  <h1>New Concepts Page</h1>
+  <h1 class='title-text'>New Concepts Page</h1>
 </section>
 <%= simple_form_for :concept, url: concepts_path, method: 'POST' do |f| %>
   <div class="form__label-row">
@@ -52,7 +52,7 @@
     <div class="col">
     </div>
     <div class="col">
-      <%= f.submit 'Update Concept', class: 'primary-button' %>
+      <%= f.submit 'Create Concept', class: 'primary-button' %>
     </div>
   </div>
 <% end %>

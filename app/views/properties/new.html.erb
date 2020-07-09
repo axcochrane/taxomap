@@ -1,7 +1,30 @@
-<%= simple_form_for :property, url: properties_path, method: 'POST' do |f| %>
-  <%= f.input :title %>
-  <%= f.submit 'Create Property' %>
+<section class='title-container'>
+  <h1 class='title-text'>New Property Page</h1>
+</section>
+<%= simple_form_for :property, url: properties_path, method: 'POST', class: 'taxomap-form' do |f| %>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :title, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.input_field :title, placeholder: 'e.g. Title', class: 'form__text-field' %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :data_type, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%=  f.select :data_type, ['String', 'DateTime', 'Integer', 'Array', 'Text'], {}, class: 'form__select' %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <%= f.submit 'Create Property', class: 'primary-button' %>
+    </div>
+  </div>
 <% end %>
-
 
 

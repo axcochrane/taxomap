@@ -34,7 +34,8 @@ class PropertiesController < ApplicationController
 
   def property_params
     params.require(:property).permit(
-      :title
+      :title,
+      :data_type
     )
   end
 end

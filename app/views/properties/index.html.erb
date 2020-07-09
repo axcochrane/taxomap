@@ -1,23 +1,28 @@
 <section class='title-container'>
   <h1 class='title-text'>Properties Index Page</h1>
+  <div class='title-container__button-container'>
+    <%= button_to 'New Property', new_property_path, class: 'primary-button', method: :get %>
+  </div>
 </section>
 <section class='table'>
 <table class='data-table'>
   <thead class='data-table__header'> 
     <tr class='data-table__row'>
-      <th>UUID</th>
+      <th>Title</th>
+      <th>Data Type</th>
       <th>Created</th>
       <th>Updated</th>
-      <th>Title</th>
+      <th>UUID</th>
       <th>Edit</th>
     </tr>
   </thead>
   <% @properties.each do |p| %>
     <tr class='data-table__row'>
-      <td><%= truncate(p.uuid, length: 20) %></td>
+      <td><%= p.title %></td>
+      <td><%= p.data_type %></td>
       <td><%= p.created_at.strftime('%e %b %Y') %></td>
       <td><%= p.updated_at.strftime('%e %b %Y %H:%M') %></td>
-      <td><%= p.title %></td>
+      <td><%= truncate(p.uuid, length: 20) %></td>
       <td><%= link_to 'Edit', edit_property_path(p) %></td>
     </tr>
   <% end %>

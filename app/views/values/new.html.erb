@@ -1,0 +1,31 @@
+<section class='title-container'>
+  <h1 class='title-text'>New Value</h1>
+</section>
+<%= simple_form_for :value, url: values_path, method: 'POST' do |f| %>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :type, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.collection_select :type, Property.all, :uuid, :title, {:prompt => true}, class: 'form__select'  %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+      <%= f.label :data, class: 'form__label' %>
+    </div>
+    <div class="col">
+      <%= f.input_field :data, placeholder: 'e.g. The Land Before Time', class: 'form__text-area' %>
+    </div>
+  </div>
+  <div class="form__label-row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <%= f.submit 'Create Value', class: 'primary-button' %>
+    </div>
+  </div>
+<% end %>
+
+
+
