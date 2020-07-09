@@ -8,7 +8,7 @@ class InstancesController < ApplicationController
     @concept = Concept.find(instance_params[:concept])
     p "instance = #{@instance.inspect}"
     p "concept = #{@concept.inspect}"
-    if IsInstanceOf.create(from_node: @instance, to_node: @concept)
+    if IsInstanceOf.create(from_node: @concept, to_node: @instance)
       flash.notice = 'Instance created successfully'
       redirect_to instances_path
     else
@@ -19,7 +19,7 @@ class InstancesController < ApplicationController
 
   def edit 
     @instance = Instance.find(params[:id])
-    @properties = @instance.concept_type.properties
+    @properties = @instance.concept_type&.properties
   end
 
   def update

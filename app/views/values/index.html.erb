@@ -7,22 +7,24 @@
 <section class='table'>
 <table class='data-table'>
   <thead class='data-table__header'> 
-      <th>UUID</th>
       <th>Property Type</th>
+      <th>Data</th>
+      <th>Instance Type</th>
+      <th>UUID</th>
       <th>Created</th>
       <th>Updated</th>
-      <th>Data</th>
       <th>Edit</th>
       <th>Delete</th>
     </tr>
   </thead>
   <% @values.each do |v| %>
     <tr class='data-table__row'>
+      <td><%= v.property_type&.title %></td>
+      <td><%= v.data %></td>
+      <td><%= v.instance&.concept_type&.title %></td>
       <td><%= truncate(v.uuid, length: 20) %></td>
-      <td><%= v.property_type %></td>
       <td><%= v.created_at.strftime('%e %b %Y') %></td>
       <td><%= v.updated_at.strftime('%e %b %Y %H:%M') %></td>
-      <td><%= v.data %></td>
       <td><%= link_to 'Edit', edit_value_path(v) %></td>
       <td><%= link_to 'Delete', value_path(v), method: 'DELETE' %></td>
     </tr>

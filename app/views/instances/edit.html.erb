@@ -7,10 +7,10 @@
       <%= i.label :concept_type, class: 'form__label' %>
     </div>
     <div class="col">
-      <%= i.collection_select :concept_type, Concept.all, :uuid, :title, { include_blank: true, selected: @instance.concept_type.uuid}, disabled: true,  class: 'form__select'  %>
+      <%= i.collection_select :concept_type, Concept.all, :uuid, :title, { include_blank: true, selected: @instance.concept_type&.uuid}, disabled: true,  class: 'form__select'  %>
     </div>
   </div>
-  <% @instance.concept_type.properties.each do |prop| %>
+  <% @instance.concept_type&.properties&.each do |prop| %>
     <%= simple_fields_for :values do |v| %>
       <div class="form__label-row">
         <div class="col">

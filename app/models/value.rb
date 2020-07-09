@@ -1,11 +1,12 @@
 class Value
   include Neo4j::ActiveNode
+
   property :data, type: String
   property :created_at, type: DateTime
   property :updated_at, type: DateTime
-  # has_one :out, :property_type, model_class: :Property, rel_class: :IsAValueOf
-  has_one :in, :property_type, model_class: :Property, origin: :values
-  # has_one :in, :instance, model_class: :Instance, rel_class: :IsAValueOn
+
+  has_one :in, :property_type, model_class: :Property, rel_class: :IsExampleOf
+  has_one :in, :instance, model_class: :Instance, rel_class: :HasValue
 end
 
 class StringValue < Value

@@ -1,10 +1,11 @@
-class HasValue
+class IsExampleOf
   include Neo4j::ActiveRel
-  from_class :Instance
   to_class :Value
-  type 'HAS_VALUE'
+  from_class :any
+  type 'IS_EXAMPLE_OF'
 
   property :created_at, type: DateTime
   property :updated_at, type: DateTime
 end
+
 

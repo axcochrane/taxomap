@@ -1,6 +1,5 @@
 class Property
   include Neo4j::ActiveNode
-  # enum data_type: {:string => 'string', :integer => 'integer', :datetime => 'datetime', :array => 'array', :text => 'text'}
 
   property :title, type: String
   property :data_type, type: String

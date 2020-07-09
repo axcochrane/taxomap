@@ -1,7 +1,7 @@
 class IsInstanceOf
   include Neo4j::ActiveRel
-  from_class :Instance
-  to_class :Concept
+  to_class :Instance
+  from_class :Concept
   type 'IS_INSTANCE_OF'
 
   property :created_at, type: DateTime
