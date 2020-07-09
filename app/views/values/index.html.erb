@@ -7,9 +7,9 @@
 <section class='table'>
 <table class='data-table'>
   <thead class='data-table__header'> 
+      <th>Instance Type</th>
       <th>Property Type</th>
       <th>Data</th>
-      <th>Instance Type</th>
       <th>UUID</th>
       <th>Created</th>
       <th>Updated</th>
@@ -19,9 +19,9 @@
   </thead>
   <% @values.each do |v| %>
     <tr class='data-table__row'>
-      <td><%= v.property_type&.title %></td>
-      <td><%= v.data %></td>
       <td><%= v.instance&.concept_type&.title %></td>
+      <td><%= v.property_type&.title %></td>
+      <td><%= truncate(v.data, length: 50) %></td>
       <td><%= truncate(v.uuid, length: 20) %></td>
       <td><%= v.created_at.strftime('%e %b %Y') %></td>
       <td><%= v.updated_at.strftime('%e %b %Y %H:%M') %></td>
