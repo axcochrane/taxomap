@@ -5,6 +5,7 @@ ruby '2.4.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
+gem 'mimemagic', '~> 0.3.2'
 gem 'neo4j'
 gem 'activegraph'
 gem 'neo4j-rake_tasks'

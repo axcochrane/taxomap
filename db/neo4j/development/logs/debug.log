@@ -1628,3 +1628,648 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2020-07-09 07:40:59.082+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 7830 seconds: MATCH (previous:`Concept`) WHERE (ID(previous) = {ID_previous}) OPTIONAL MATCH (previous)<-[rel1:`IS_PARENT`]-(next:`Concept`) RETURN ID(previous), collect(next)
 2020-07-09 07:41:07.303+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 5229 seconds: MATCH (concept89) WHERE (ID(concept89) = {ID_concept89}) MATCH (concept89)-[rel1:`HAS_PROPERTIES`]->(result_properties3:`Property`) RETURN result_properties3.title
 2020-07-09 07:41:07.304+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 5229 seconds: MATCH (concept89) WHERE (ID(concept89) = {ID_concept89}) MATCH (concept89)-[rel1:`HAS_PROPERTIES`]->(result_properties3:`Property`) RETURN result_properties3.title
+2022-02-14 11:54:57.601+0000 WARN [o.n.i.p.PageCache] The dbms.memory.pagecache.size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a computed heuristic value of 6175674368 bytes will be used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2022-02-14 11:54:58.024+0000 INFO [o.n.k.i.f.CommunityEditionModule] No locking implementation specified, defaulting to 'community'
+2022-02-14 11:54:58.232+0000 INFO [o.n.k.AvailabilityGuard] Requirement makes database unavailable: Database available
+2022-02-14 11:54:58.246+0000 INFO [o.n.k.i.DiagnosticsManager] --- INITIALIZED diagnostics START ---
+2022-02-14 11:54:58.246+0000 INFO [o.n.k.i.DiagnosticsManager] Neo4j Kernel properties:
+2022-02-14 11:54:58.246+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.http.enabled=true
+2022-02-14 11:54:58.246+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.security.auth_enabled=false
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.windows_service_name=neo4j
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.http.listen_address=localhost:7474
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.https.listen_address=localhost:7473
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] unsupported.dbms.directories.neo4j_home=/home/cochrane/projects/taxomap/db/neo4j/development
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.bolt.listen_address=localhost:7472
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.directories.import=import
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] unsupported.dbms.edition=community
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.bolt.enabled=true
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.https.enabled=false
+2022-02-14 11:54:58.247+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.jvm.additional=-Dunsupported.dbms.udc.source=tarball
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.tx_log.rotation.retention_policy=1 days
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] Diagnostics providers:
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] org.neo4j.kernel.configuration.Config
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] org.neo4j.kernel.info.DiagnosticsManager
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] SYSTEM_MEMORY
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] JAVA_MEMORY
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] OPERATING_SYSTEM
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] JAVA_VIRTUAL_MACHINE
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] CLASSPATH
+2022-02-14 11:54:58.248+0000 INFO [o.n.k.i.DiagnosticsManager] LIBRARY_PATH
+2022-02-14 11:54:58.249+0000 INFO [o.n.k.i.DiagnosticsManager] SYSTEM_PROPERTIES
+2022-02-14 11:54:58.249+0000 INFO [o.n.k.i.DiagnosticsManager] TIMEZONE_DATABASE
+2022-02-14 11:54:58.249+0000 INFO [o.n.k.i.DiagnosticsManager] LINUX_SCHEDULERS
+2022-02-14 11:54:58.249+0000 INFO [o.n.k.i.DiagnosticsManager] NETWORK
+2022-02-14 11:54:58.249+0000 INFO [o.n.k.i.DiagnosticsManager] System memory information:
+2022-02-14 11:54:58.253+0000 INFO [o.n.k.i.DiagnosticsManager] Total Physical memory: 15.34 GB
+2022-02-14 11:54:58.254+0000 INFO [o.n.k.i.DiagnosticsManager] Free Physical memory: 8.22 GB
+2022-02-14 11:54:58.254+0000 INFO [o.n.k.i.DiagnosticsManager] Committed virtual memory: 7.13 GB
+2022-02-14 11:54:58.256+0000 INFO [o.n.k.i.DiagnosticsManager] Total swap space: 0.00 B
+2022-02-14 11:54:58.257+0000 INFO [o.n.k.i.DiagnosticsManager] Free swap space: 0.00 B
+2022-02-14 11:54:58.257+0000 INFO [o.n.k.i.DiagnosticsManager] JVM memory information:
+2022-02-14 11:54:58.257+0000 INFO [o.n.k.i.DiagnosticsManager] Free  memory: 184.13 MB
+2022-02-14 11:54:58.257+0000 INFO [o.n.k.i.DiagnosticsManager] Total memory: 246.00 MB
+2022-02-14 11:54:58.257+0000 INFO [o.n.k.i.DiagnosticsManager] Max   memory: 3.84 GB
+2022-02-14 11:54:58.260+0000 INFO [o.n.k.i.DiagnosticsManager] Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2022-02-14 11:54:58.260+0000 INFO [o.n.k.i.DiagnosticsManager] Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2022-02-14 11:54:58.261+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: Code Cache (Non-heap memory): committed=5.63 MB, used=5.57 MB, max=240.00 MB, threshold=0.00 B
+2022-02-14 11:54:58.261+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: Metaspace (Non-heap memory): committed=16.38 MB, used=15.51 MB, max=-1.00 B, threshold=0.00 B
+2022-02-14 11:54:58.261+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: Compressed Class Space (Non-heap memory): committed=2.13 MB, used=1.93 MB, max=1.00 GB, threshold=0.00 B
+2022-02-14 11:54:58.261+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Eden Space (Heap memory): committed=144.00 MB, used=56.00 MB, max=-1.00 B, threshold=?
+2022-02-14 11:54:58.262+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Survivor Space (Heap memory): committed=3.00 MB, used=3.00 MB, max=-1.00 B, threshold=?
+2022-02-14 11:54:58.262+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Old Gen (Heap memory): committed=99.00 MB, used=1.88 MB, max=3.84 GB, threshold=0.00 B
+2022-02-14 11:54:58.262+0000 INFO [o.n.k.i.DiagnosticsManager] Operating system information:
+2022-02-14 11:54:58.263+0000 INFO [o.n.k.i.DiagnosticsManager] Operating System: Linux; version: 4.18.0-348.7.1.el8_5.x86_64; arch: amd64; cpus: 4
+2022-02-14 11:54:58.263+0000 INFO [o.n.k.i.DiagnosticsManager] Max number of file descriptors: 262144
+2022-02-14 11:54:58.263+0000 INFO [o.n.k.i.DiagnosticsManager] Number of open file descriptors: 116
+2022-02-14 11:54:58.267+0000 INFO [o.n.k.i.DiagnosticsManager] Process id: 14113@dell-7450
+2022-02-14 11:54:58.268+0000 INFO [o.n.k.i.DiagnosticsManager] Byte order: LITTLE_ENDIAN
+2022-02-14 11:54:58.270+0000 INFO [o.n.k.i.DiagnosticsManager] Local timezone: Europe/London
+2022-02-14 11:54:58.270+0000 INFO [o.n.k.i.DiagnosticsManager] JVM information:
+2022-02-14 11:54:58.270+0000 INFO [o.n.k.i.DiagnosticsManager] VM Name: OpenJDK 64-Bit Server VM
+2022-02-14 11:54:58.270+0000 INFO [o.n.k.i.DiagnosticsManager] VM Vendor: Red Hat, Inc.
+2022-02-14 11:54:58.271+0000 INFO [o.n.k.i.DiagnosticsManager] VM Version: 25.312-b07
+2022-02-14 11:54:58.271+0000 INFO [o.n.k.i.DiagnosticsManager] JIT compiler: HotSpot 64-Bit Tiered Compilers
+2022-02-14 11:54:58.271+0000 INFO [o.n.k.i.DiagnosticsManager] VM Arguments: [-XX:+UseG1GC, -XX:-OmitStackTraceInFastThrow, -XX:+AlwaysPreTouch, -XX:+UnlockExperimentalVMOptions, -XX:+TrustFinalNonStaticFields, -XX:+DisableExplicitGC, -Djdk.tls.ephemeralDHKeySize=2048, -Djdk.tls.rejectClientInitiatedRenegotiation=true, -Dunsupported.dbms.udc.source=tarball, -Dfile.encoding=UTF-8]
+2022-02-14 11:54:58.272+0000 INFO [o.n.k.i.DiagnosticsManager] Java classpath:
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/sunrsasign.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-csv-3.4.1.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-expression-3.4-3.4.1.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/ext/sunec.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/ext/zipfs.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-procedure-api-3.4.1.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/concurrentlinkedhashmap-lru-1.4.2.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jersey-servlet-1.19.3.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-graphdb-api-3.4.1.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/resources.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/jsse.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jersey-core-1.19.3.jar
+2022-02-14 11:54:58.281+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/bcpkix-jdk15on-1.59.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-lucene-index-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/rhino-1.7.9.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/ext/sunpkcs11.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/plugins
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-lucene-upgrade-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/classes
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/ext/localedata.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/parboiled-core-1.1.7.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/ext/dnsns.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-unsafe-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-codegen-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-util-3.4-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-consistency-check-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-command-line-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-index-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/scala-reflect-2.11.12.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-ssl-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-values-3.4.1.jar
+2022-02-14 11:54:58.282+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-ir-3.3-3.3.5.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-logical-plans-3.4-3.4.1.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-io-3.4.1.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/netty-all-4.1.24.Final.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/lucene-core-5.5.5.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jProcesses-1.6.4.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jackson-mapper-asl-1.9.13.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/lucene-queryparser-5.5.5.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-browser-3.1.14.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jetty-http-9.4.8.v20171121.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/commons-text-1.3.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-graph-matching-3.1.6.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-shell-3.4.1.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/conf/
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-kernel-3.4.1.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/jce.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/commons-lang-2.6.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/openCypher-frontend-1-3.4.1.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-planner-spi-3.4-3.4.1.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-planner-3.4-3.4.1.jar
+2022-02-14 11:54:58.283+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/rt.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jersey-server-1.19.3.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/scala-library-2.11.12.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/commons-configuration-1.10.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jPowerShell-1.9.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-compiler-2.3-2.3.12.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-frontend-3.1-3.1.8.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/server-api-3.4.1.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jetty-util-9.4.8.v20171121.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-common-3.4.1.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-primitive-collections-3.4.1.jar
+2022-02-14 11:54:58.284+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-graph-algo-3.4.1.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jackson-jaxrs-1.9.13.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-udc-3.4.1.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/commons-logging-1.1.1.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-compiler-3.1-3.1.8.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/WMI4Java-1.6.1.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jetty-server-9.4.8.v20171121.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jsr311-api-1.1.2.r612.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/lucene-analyzers-common-5.5.5.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-jmx-3.4.1.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/commons-compress-1.16.1.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-security-3.4.1.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jackson-core-asl-1.9.13.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/bcprov-jdk15on-1.59.jar
+2022-02-14 11:54:58.285+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-import-tool-3.4.1.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/jfr.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-compiler-3.3-3.3.5.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-interpreted-runtime-3.4.1.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-kernel-api-3.4.1.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-spatial-index-3.4.1.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-configuration-3.4.1.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/parboiled-scala_2.11-1.1.7.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/ext/jaccess.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/ext/cldrdata.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/charsets.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jetty-io-9.4.8.v20171121.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-resource-3.4.1.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-collections-3.4.1.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-dbms-3.4.1.jar
+2022-02-14 11:54:58.286+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-ir-3.4-3.4.1.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/commons-io-2.6.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/plugins/*
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jetty-security-9.4.8.v20171121.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-logging-3.4.1.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/objenesis-2.6.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-logical-plans-3.3-3.3.5.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/ext/sunjce_provider.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/lucene-codecs-5.5.5.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-bolt-3.4.1.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-server-3.4.1.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jetty-xml-9.4.8.v20171121.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-3.4.1.jar
+2022-02-14 11:54:58.287+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/opencsv-2.3.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/ext/nashorn.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/commons-lang3-3.7.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jline-2.12.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/caffeine-2.6.2.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jetty-servlet-9.4.8.v20171121.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-runtime-util-3.4.1.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/jetty-webapp-9.4.8.v20171121.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-frontend-3.3-3.3.5.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/javax.servlet-api-3.1.0.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/cochrane/projects/taxomap/db/neo4j/development/lib/neo4j-cypher-frontend-2.3-2.3.12.jar
+2022-02-14 11:54:58.288+0000 INFO [o.n.k.i.DiagnosticsManager] Library path:
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/java/packages/lib/amd64
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib64
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib64
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] System.properties:
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/lib/amd64
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] jdk.tls.rejectClientInitiatedRenegotiation = true
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] path.separator = :
+2022-02-14 11:54:58.289+0000 INFO [o.n.k.i.DiagnosticsManager] file.encoding.pkg = sun.io
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] user.country = GB
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] sun.java.launcher = SUN_STANDARD
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] sun.os.patch.level = unknown
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] user.dir = /home/cochrane/projects/taxomap
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] sun.jnu.encoding = UTF-8
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] unsupported.dbms.udc.source = tarball
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] user.home = /home/cochrane
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] user.timezone = Europe/London
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] file.encoding = UTF-8
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] user.name = cochrane
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] sun.java.command = org.neo4j.server.CommunityEntryPoint --home-dir=/home/cochrane/projects/taxomap/db/neo4j/development --config-dir=/home/cochrane/projects/taxomap/db/neo4j/development/conf
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] sun.arch.data.model = 64
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] user.language = en
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] awt.toolkit = sun.awt.X11.XToolkit
+2022-02-14 11:54:58.290+0000 INFO [o.n.k.i.DiagnosticsManager] jdk.tls.ephemeralDHKeySize = 2048
+2022-02-14 11:54:58.291+0000 INFO [o.n.k.i.DiagnosticsManager] file.separator = /
+2022-02-14 11:54:58.291+0000 INFO [o.n.k.i.DiagnosticsManager] sun.io.unicode.encoding = UnicodeLittle
+2022-02-14 11:54:58.291+0000 INFO [o.n.k.i.DiagnosticsManager] sun.cpu.endian = little
+2022-02-14 11:54:58.291+0000 INFO [o.n.k.i.DiagnosticsManager] sun.desktop = gnome
+2022-02-14 11:54:58.291+0000 INFO [o.n.k.i.DiagnosticsManager] sun.cpu.isalist = 
+2022-02-14 11:54:58.291+0000 INFO [o.n.k.i.DiagnosticsManager] (IANA) TimeZone Database Version:
+2022-02-14 11:54:58.330+0000 INFO [o.n.k.i.DiagnosticsManager]   TimeZone version: 2021e (available for 601 zone identifiers)
+2022-02-14 11:54:58.330+0000 INFO [o.n.k.i.DiagnosticsManager] Linux scheduler information:
+2022-02-14 11:54:58.334+0000 INFO [o.n.k.i.DiagnosticsManager] none
+2022-02-14 11:54:58.335+0000 INFO [o.n.k.i.DiagnosticsManager] none
+2022-02-14 11:54:58.335+0000 INFO [o.n.k.i.DiagnosticsManager] none
+2022-02-14 11:54:58.335+0000 INFO [o.n.k.i.DiagnosticsManager] [mq-deadline] kyber bfq none
+2022-02-14 11:54:58.336+0000 INFO [o.n.k.i.DiagnosticsManager] Network information:
+2022-02-14 11:54:58.337+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth365ab09:
+2022-02-14 11:54:58.337+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:2870:87ff:fe24:6e44%veth365ab09
+2022-02-14 11:54:58.337+0000 INFO [o.n.k.i.DiagnosticsManager] Interface docker0:
+2022-02-14 11:54:58.337+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.17.0.1
+2022-02-14 11:54:58.337+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-6b28650ac0da:
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:42:49ff:feaa:fd36%br-6b28650ac0da
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.19.0.1
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager] Interface virbr0:
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 192.168.122.1
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager] Interface wlp2s0:
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 2a00:23c4:9c08:3a01:7f96:3521:e15a:c462%wlp2s0
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:7285:e3cd:f403:3799%wlp2s0
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 192.168.1.180
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager] Interface lo:
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 127.0.0.1
+2022-02-14 11:54:58.338+0000 INFO [o.n.k.i.DiagnosticsManager] --- INITIALIZED diagnostics END ---
+2022-02-14 11:54:58.575+0000 INFO [o.n.b.BoltKernelExtension] Bolt Server extension loaded.
+2022-02-14 11:54:58.960+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db
+2022-02-14 11:54:58.994+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db
+2022-02-14 11:54:58.994+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Format not configured. Selected format from the store: RecordFormat:StandardV3_4[v0.A.9]
+2022-02-14 11:54:59.704+0000 INFO [o.n.k.i.a.i.IndexingService] IndexingService.init: indexes not specifically mentioned above are ONLINE
+2022-02-14 11:54:59.716+0000 INFO [o.n.k.NeoStoreDataSource] Commits found after last check point (which is at LogPosition{logVersion=0, byteOffset=358346}). First txId after last checkpoint: 511 
+2022-02-14 11:54:59.717+0000 INFO [o.n.k.NeoStoreDataSource] Recovery required from position LogPosition{logVersion=0, byteOffset=358346}
+2022-02-14 11:54:59.733+0000 INFO [o.n.k.r.Recovery]   10% completed
+2022-02-14 11:54:59.734+0000 INFO [o.n.k.r.Recovery]   20% completed
+2022-02-14 11:54:59.735+0000 INFO [o.n.k.r.Recovery]   30% completed
+2022-02-14 11:54:59.735+0000 INFO [o.n.k.r.Recovery]   40% completed
+2022-02-14 11:54:59.736+0000 INFO [o.n.k.r.Recovery]   50% completed
+2022-02-14 11:54:59.753+0000 INFO [o.n.k.r.Recovery]   60% completed
+2022-02-14 11:54:59.754+0000 INFO [o.n.k.r.Recovery]   70% completed
+2022-02-14 11:54:59.755+0000 INFO [o.n.k.r.Recovery]   80% completed
+2022-02-14 11:54:59.756+0000 INFO [o.n.k.r.Recovery]   90% completed
+2022-02-14 11:54:59.757+0000 INFO [o.n.k.r.Recovery]   100% completed
+2022-02-14 11:54:59.758+0000 INFO [o.n.k.NeoStoreDataSource] Recovery completed. 11 transactions, first:511, last:521 recovered
+2022-02-14 11:54:59.761+0000 INFO [o.n.k.i.s.DynamicArrayStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db.labels] ...
+2022-02-14 11:54:59.770+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[1]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/string-1.0/index-1, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=8ms
+2022-02-14 11:54:59.774+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[1]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/native-1.0/index-1, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=3ms
+2022-02-14 11:54:59.777+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[1]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=3ms
+2022-02-14 11:54:59.779+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[1]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2022-02-14 11:54:59.780+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/string-1.0/index-8, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=1ms
+2022-02-14 11:54:59.782+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/native-1.0/index-8, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=0ms
+2022-02-14 11:54:59.783+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2022-02-14 11:54:59.784+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2022-02-14 11:54:59.786+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/string-1.0/index-15, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=1ms
+2022-02-14 11:54:59.787+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/native-1.0/index-15, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=0ms
+2022-02-14 11:54:59.790+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2022-02-14 11:54:59.799+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=9ms
+2022-02-14 11:54:59.801+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/string-1.0/index-22, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=2ms
+2022-02-14 11:54:59.802+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/native-1.0/index-22, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2022-02-14 11:54:59.803+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2022-02-14 11:54:59.808+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2022-02-14 11:54:59.809+0000 INFO [o.n.k.i.s.DynamicArrayStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db.labels] high id=1 (defragged=0)
+2022-02-14 11:54:59.809+0000 INFO [o.n.k.i.s.DynamicArrayStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db.labels rebuild id generator, highId=1 defragged count=0
+2022-02-14 11:54:59.809+0000 INFO [o.n.k.i.s.NodeStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db] ...
+2022-02-14 11:54:59.818+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/string-1.0/index-29, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=9ms
+2022-02-14 11:54:59.825+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/native-1.0/index-29, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=7ms
+2022-02-14 11:54:59.827+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2022-02-14 11:54:59.834+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=7ms
+2022-02-14 11:54:59.836+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[5](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/36/string-1.0/index-36, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=2ms
+2022-02-14 11:54:59.838+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[5](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/36/native-1.0/index-36, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2022-02-14 11:54:59.842+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[5](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/36/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=3ms
+2022-02-14 11:54:59.844+0000 INFO [o.n.k.i.s.NodeStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db] high id=174 (defragged=0)
+2022-02-14 11:54:59.844+0000 INFO [o.n.k.i.s.NodeStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db rebuild id generator, highId=174 defragged count=0
+2022-02-14 11:54:59.844+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index.keys] ...
+2022-02-14 11:54:59.845+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[5](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/36/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=3ms
+2022-02-14 11:54:59.848+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[6](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/43/string-1.0/index-43, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=3ms
+2022-02-14 11:54:59.850+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[6](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/43/native-1.0/index-43, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2022-02-14 11:54:59.854+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[6](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/43/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=4ms
+2022-02-14 11:54:59.857+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[6](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/43/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2022-02-14 11:54:59.865+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[7](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/50/string-1.0/index-50, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=8ms
+2022-02-14 11:54:59.868+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[7](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/50/native-1.0/index-50, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=3ms
+2022-02-14 11:54:59.871+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[7](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/50/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=3ms
+2022-02-14 11:54:59.873+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[7](property[3]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/50/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2022-02-14 11:54:59.875+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( GENERAL, :label[3](property[6]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/57/string-1.0/index-57, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=2ms
+2022-02-14 11:54:59.877+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( GENERAL, :label[3](property[6]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/57/native-1.0/index-57, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=1ms
+2022-02-14 11:54:59.879+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( GENERAL, :label[3](property[6]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/57/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2022-02-14 11:54:59.881+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( GENERAL, :label[3](property[6]) ), file=/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/57/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=0ms
+2022-02-14 11:54:59.884+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] Scan store recovery completed: Number of cleaned crashed pointers: 0 Number of pages visited: 3 Time spent: 3ms
+2022-02-14 11:54:59.885+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index.keys] high id=9 (defragged=0)
+2022-02-14 11:54:59.886+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index.keys rebuild id generator, highId=9 defragged count=0
+2022-02-14 11:54:59.886+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index] ...
+2022-02-14 11:54:59.908+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index] high id=8 (defragged=0)
+2022-02-14 11:54:59.909+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index rebuild id generator, highId=8 defragged count=0
+2022-02-14 11:54:59.920+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.strings] ...
+2022-02-14 11:54:59.935+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.strings] high id=42 (defragged=0)
+2022-02-14 11:54:59.935+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.strings rebuild id generator, highId=42 defragged count=0
+2022-02-14 11:54:59.935+0000 INFO [o.n.k.i.s.DynamicArrayStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.arrays] ...
+2022-02-14 11:54:59.947+0000 INFO [o.n.k.i.s.DynamicArrayStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.arrays] high id=1 (defragged=0)
+2022-02-14 11:54:59.947+0000 INFO [o.n.k.i.s.DynamicArrayStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.arrays rebuild id generator, highId=1 defragged count=0
+2022-02-14 11:54:59.947+0000 INFO [o.n.k.i.s.PropertyStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db] ...
+2022-02-14 11:54:59.961+0000 INFO [o.n.k.i.s.PropertyStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db] high id=386 (defragged=0)
+2022-02-14 11:54:59.961+0000 INFO [o.n.k.i.s.PropertyStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db rebuild id generator, highId=386 defragged count=0
+2022-02-14 11:54:59.961+0000 INFO [o.n.k.i.s.RelationshipStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshipstore.db] ...
+2022-02-14 11:54:59.975+0000 INFO [o.n.k.i.s.RelationshipStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshipstore.db] high id=226 (defragged=0)
+2022-02-14 11:54:59.975+0000 INFO [o.n.k.i.s.RelationshipStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshipstore.db rebuild id generator, highId=226 defragged count=0
+2022-02-14 11:54:59.975+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db.names] ...
+2022-02-14 11:54:59.989+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db.names] high id=11 (defragged=0)
+2022-02-14 11:54:59.989+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db.names rebuild id generator, highId=11 defragged count=0
+2022-02-14 11:54:59.989+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db] ...
+2022-02-14 11:55:00.006+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db] high id=10 (defragged=0)
+2022-02-14 11:55:00.006+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db rebuild id generator, highId=10 defragged count=0
+2022-02-14 11:55:00.018+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db.names] ...
+2022-02-14 11:55:00.035+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db.names] high id=10 (defragged=0)
+2022-02-14 11:55:00.035+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db.names rebuild id generator, highId=10 defragged count=0
+2022-02-14 11:55:00.035+0000 INFO [o.n.k.i.s.LabelTokenStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db] ...
+2022-02-14 11:55:00.049+0000 INFO [o.n.k.i.s.LabelTokenStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db] high id=8 (defragged=0)
+2022-02-14 11:55:00.050+0000 INFO [o.n.k.i.s.LabelTokenStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db rebuild id generator, highId=8 defragged count=0
+2022-02-14 11:55:00.058+0000 INFO [o.n.k.i.s.SchemaStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.schemastore.db] ...
+2022-02-14 11:55:00.073+0000 INFO [o.n.k.i.s.SchemaStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.schemastore.db] high id=58 (defragged=0)
+2022-02-14 11:55:00.073+0000 INFO [o.n.k.i.s.SchemaStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.schemastore.db rebuild id generator, highId=58 defragged count=0
+2022-02-14 11:55:00.073+0000 INFO [o.n.k.i.s.RelationshipGroupStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshipgroupstore.db] ...
+2022-02-14 11:55:00.088+0000 INFO [o.n.k.i.s.RelationshipGroupStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshipgroupstore.db] high id=1 (defragged=0)
+2022-02-14 11:55:00.088+0000 INFO [o.n.k.i.s.RelationshipGroupStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore.relationshipgroupstore.db rebuild id generator, highId=1 defragged count=0
+2022-02-14 11:55:00.088+0000 INFO [o.n.k.i.s.MetaDataStore] Rebuilding id generator for[/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore] ...
+2022-02-14 11:55:00.104+0000 INFO [o.n.k.i.s.MetaDataStore] [/home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore] high id=15 (defragged=0)
+2022-02-14 11:55:00.104+0000 INFO [o.n.k.i.s.MetaDataStore] /home/cochrane/projects/taxomap/db/neo4j/development/data/databases/graph.db/neostore rebuild id generator, highId=15 defragged count=0
+2022-02-14 11:55:00.113+0000 INFO [o.n.k.i.a.i.IndexingService] IndexingService.start: indexes not specifically mentioned above are ONLINE
+2022-02-14 11:55:00.149+0000 INFO [o.n.k.i.DatabaseHealth] Database health set to OK
+2022-02-14 11:55:00.491+0000 INFO [o.n.b.BoltKernelExtension] Bolt enabled on localhost:7472.
+2022-02-14 11:55:00.501+0000 INFO [o.n.k.AvailabilityGuard] Fulfilling of requirement makes database available: Database available
+2022-02-14 11:55:00.512+0000 INFO [o.n.k.i.f.GraphDatabaseFacadeFactory] Database is now ready
+2022-02-14 11:55:00.514+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2022-02-14 11:55:00.514+0000 INFO [o.n.k.i.DiagnosticsManager] Graph Database: community single StoreId{creationTime=1593919137771, randomId=5085865286285681303, storeVersion=16094931155187206, upgradeTime=1593919137771, upgradeId=1}
+2022-02-14 11:55:00.514+0000 INFO [o.n.k.i.DiagnosticsManager] Kernel version: 3.4.1,bf2fd1991decc5b49b63105e793230f19ccf6f15
+2022-02-14 11:55:00.514+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2022-02-14 11:55:00.516+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2022-02-14 11:55:00.516+0000 INFO [o.n.k.i.DiagnosticsManager] Store versions:
+2022-02-14 11:55:00.516+0000 INFO [o.n.k.i.DiagnosticsManager] Store versions:
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   NodeStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyIndexStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipTypeStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2022-02-14 11:55:00.517+0000 INFO [o.n.k.i.DiagnosticsManager]   LabelTokenStore v0.A.9
+2022-02-14 11:55:00.518+0000 INFO [o.n.k.i.DiagnosticsManager]   SchemaStore v0.A.9
+2022-02-14 11:55:00.518+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipGroupStore v0.A.9
+2022-02-14 11:55:00.518+0000 INFO [o.n.k.i.DiagnosticsManager]   NeoStore v0.A.9
+2022-02-14 11:55:00.518+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2022-02-14 11:55:00.518+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2022-02-14 11:55:00.518+0000 INFO [o.n.k.i.DiagnosticsManager] Id usage:
+2022-02-14 11:55:00.518+0000 INFO [o.n.k.i.DiagnosticsManager] Id usage:
+2022-02-14 11:55:00.518+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2022-02-14 11:55:00.518+0000 INFO [o.n.k.i.DiagnosticsManager]   NodeStore: used=174 high=173
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=9 high=8
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyIndexStore: used=8 high=7
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=42 high=41
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyStore: used=386 high=385
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipStore: used=226 high=225
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=11 high=10
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipTypeStore: used=10 high=9
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=10 high=9
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   LabelTokenStore: used=8 high=7
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   SchemaStore: used=58 high=57
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipGroupStore: used=1 high=0
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager]   NeoStore: used=15 high=14
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS START ---
+2022-02-14 11:55:00.519+0000 INFO [o.n.k.i.DiagnosticsManager] Neostore records:
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] TIME (Creation time): 1593919137771
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] RANDOM_NUMBER (Random number for store id): 5085865286285681303
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] LOG_VERSION (Current log version): 0
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_TRANSACTION_ID (Last committed transaction): 521
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] STORE_VERSION (Store format version): 16094931155187206
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 128
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TIME (Time of last upgrade): 1593919137771
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): -161279841918
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): 0
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 369653
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 1594280769905
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+2022-02-14 11:55:00.520+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS END ---
+2022-02-14 11:55:00.521+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE START ---
+2022-02-14 11:55:00.521+0000 INFO [o.n.k.i.DiagnosticsManager] Transaction log:
+2022-02-14 11:55:00.522+0000 INFO [o.n.k.i.DiagnosticsManager] Oldest transaction 2 found in log with version 0
+2022-02-14 11:55:00.522+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE END ---
+2022-02-14 11:55:00.526+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2022-02-14 11:55:00.526+0000 INFO [o.n.k.i.DiagnosticsManager] Disk space on partition (Total / Free / Free %): 192164630528 / 19020374016 / 9
+2022-02-14 11:55:00.527+0000 INFO [o.n.k.i.DiagnosticsManager] Storage files: (filename : modification date - size)
+2022-02-14 11:55:00.528+0000 INFO [o.n.k.i.DiagnosticsManager]   index:
+2022-02-14 11:55:00.528+0000 INFO [o.n.k.i.DiagnosticsManager]   - Total: 2022-02-14T11:54:59+0000 - 0.00 B
+2022-02-14 11:55:00.529+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.530+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.counts.db.a: 2022-02-14T11:50:18+0000 - 1.66 kB
+2022-02-14 11:55:00.530+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.counts.db.b: 2022-02-14T11:50:18+0000 - 1.66 kB
+2022-02-14 11:55:00.530+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.id: 2022-02-14T11:55:00+0000 - 9.00 B
+2022-02-14 11:55:00.531+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labelscanstore.db: 2022-02-14T11:54:59+0000 - 48.00 kB
+2022-02-14 11:55:00.531+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.531+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.id: 2022-02-14T11:55:00+0000 - 9.00 B
+2022-02-14 11:55:00.531+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.names: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.531+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.names.id: 2022-02-14T11:55:00+0000 - 9.00 B
+2022-02-14 11:55:00.531+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.532+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.id: 2022-02-14T11:54:59+0000 - 9.00 B
+2022-02-14 11:55:00.532+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.labels: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.532+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.labels.id: 2022-02-14T11:54:59+0000 - 9.00 B
+2022-02-14 11:55:00.532+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db: 2022-02-14T11:50:18+0000 - 15.94 kB
+2022-02-14 11:55:00.533+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.arrays: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.533+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.arrays.id: 2022-02-14T11:54:59+0000 - 9.00 B
+2022-02-14 11:55:00.533+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.id: 2022-02-14T11:54:59+0000 - 9.00 B
+2022-02-14 11:55:00.533+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.534+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index.id: 2022-02-14T11:54:59+0000 - 9.00 B
+2022-02-14 11:55:00.534+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index.keys: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.534+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index.keys.id: 2022-02-14T11:54:59+0000 - 9.00 B
+2022-02-14 11:55:00.534+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.strings: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.535+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.strings.id: 2022-02-14T11:54:59+0000 - 9.00 B
+2022-02-14 11:55:00.535+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipgroupstore.db: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.535+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipgroupstore.db.id: 2022-02-14T11:55:00+0000 - 9.00 B
+2022-02-14 11:55:00.535+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipstore.db: 2022-02-14T11:50:18+0000 - 7.97 kB
+2022-02-14 11:55:00.535+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipstore.db.id: 2022-02-14T11:54:59+0000 - 9.00 B
+2022-02-14 11:55:00.536+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.536+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db.id: 2022-02-14T11:55:00+0000 - 9.00 B
+2022-02-14 11:55:00.536+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db.names: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.536+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db.names.id: 2022-02-14T11:54:59+0000 - 9.00 B
+2022-02-14 11:55:00.537+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.schemastore.db: 2022-02-14T11:50:18+0000 - 8.00 kB
+2022-02-14 11:55:00.537+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.schemastore.db.id: 2022-02-14T11:55:00+0000 - 9.00 B
+2022-02-14 11:55:00.537+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.transaction.db.0: 2022-02-14T11:50:18+0000 - 360.99 kB
+2022-02-14 11:55:00.537+0000 INFO [o.n.k.i.DiagnosticsManager]   schema:
+2022-02-14 11:55:00.537+0000 INFO [o.n.k.i.DiagnosticsManager]     index:
+2022-02-14 11:55:00.537+0000 INFO [o.n.k.i.DiagnosticsManager]       lucene_native-2.0:
+2022-02-14 11:55:00.537+0000 INFO [o.n.k.i.DiagnosticsManager]         1:
+2022-02-14 11:55:00.538+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2022-02-14 11:55:00.538+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2022-02-14 11:55:00.538+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1k: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.538+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.538+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.539+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2022-02-14T11:50:18+0000 - 16.00 kB
+2022-02-14 11:55:00.539+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 16.08 kB
+2022-02-14 11:55:00.539+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2022-02-14 11:55:00.539+0000 INFO [o.n.k.i.DiagnosticsManager]             index-1: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.539+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.540+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2022-02-14 11:55:00.540+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.540+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.540+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2022-02-14 11:55:00.540+0000 INFO [o.n.k.i.DiagnosticsManager]             index-1: 2022-02-14T11:54:59+0000 - 48.00 kB
+2022-02-14 11:55:00.541+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 48.00 kB
+2022-02-14 11:55:00.541+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2022-02-14 11:55:00.541+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.541+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.541+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2022-02-14T11:50:18+0000 - 184.08 kB
+2022-02-14 11:55:00.541+0000 INFO [o.n.k.i.DiagnosticsManager]         15:
+2022-02-14 11:55:00.541+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2022-02-14 11:55:00.542+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2022-02-14 11:55:00.542+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1i: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.542+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.542+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.542+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2022-02-14T11:50:18+0000 - 16.00 kB
+2022-02-14 11:55:00.543+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 16.08 kB
+2022-02-14 11:55:00.543+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2022-02-14 11:55:00.543+0000 INFO [o.n.k.i.DiagnosticsManager]             index-15: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.543+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.543+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2022-02-14 11:55:00.543+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.544+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.544+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2022-02-14 11:55:00.544+0000 INFO [o.n.k.i.DiagnosticsManager]             index-15: 2022-02-14T11:54:59+0000 - 48.00 kB
+2022-02-14 11:55:00.544+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 48.00 kB
+2022-02-14 11:55:00.544+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2022-02-14 11:55:00.544+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.545+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.545+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2022-02-14T11:50:18+0000 - 184.08 kB
+2022-02-14 11:55:00.545+0000 INFO [o.n.k.i.DiagnosticsManager]         22:
+2022-02-14 11:55:00.545+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2022-02-14 11:55:00.545+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2022-02-14 11:55:00.546+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1h: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.546+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.546+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.547+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2022-02-14T11:50:18+0000 - 16.00 kB
+2022-02-14 11:55:00.547+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 16.08 kB
+2022-02-14 11:55:00.547+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2022-02-14 11:55:00.547+0000 INFO [o.n.k.i.DiagnosticsManager]             index-22: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.548+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.548+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2022-02-14 11:55:00.548+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.549+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.549+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2022-02-14 11:55:00.549+0000 INFO [o.n.k.i.DiagnosticsManager]             index-22: 2022-02-14T11:54:59+0000 - 48.00 kB
+2022-02-14 11:55:00.549+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 48.00 kB
+2022-02-14 11:55:00.549+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2022-02-14 11:55:00.550+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.550+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.550+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2022-02-14T11:50:18+0000 - 184.08 kB
+2022-02-14 11:55:00.550+0000 INFO [o.n.k.i.DiagnosticsManager]         29:
+2022-02-14 11:55:00.551+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2022-02-14 11:55:00.551+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2022-02-14 11:55:00.551+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_10: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.551+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.551+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.551+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2022-02-14T11:50:18+0000 - 16.00 kB
+2022-02-14 11:55:00.552+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 16.08 kB
+2022-02-14 11:55:00.552+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2022-02-14 11:55:00.552+0000 INFO [o.n.k.i.DiagnosticsManager]             index-29: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.552+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.552+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2022-02-14 11:55:00.553+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.553+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.553+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2022-02-14 11:55:00.553+0000 INFO [o.n.k.i.DiagnosticsManager]             index-29: 2022-02-14T11:54:59+0000 - 48.00 kB
+2022-02-14 11:55:00.553+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 48.00 kB
+2022-02-14 11:55:00.553+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2022-02-14 11:55:00.554+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.554+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.554+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2022-02-14T11:50:18+0000 - 184.08 kB
+2022-02-14 11:55:00.554+0000 INFO [o.n.k.i.DiagnosticsManager]         36:
+2022-02-14 11:55:00.554+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2022-02-14 11:55:00.554+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2022-02-14 11:55:00.555+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_w: 2022-02-14T11:50:18+0000 - 85.00 B
+2022-02-14 11:55:00.555+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.555+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2022-02-14T11:50:18+0000 - 85.00 B
+2022-02-14 11:55:00.555+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2022-02-14T11:50:18+0000 - 16.00 kB
+2022-02-14 11:55:00.555+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 16.08 kB
+2022-02-14 11:55:00.555+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2022-02-14 11:55:00.556+0000 INFO [o.n.k.i.DiagnosticsManager]             index-36: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.556+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.556+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2022-02-14 11:55:00.556+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.556+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.556+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2022-02-14 11:55:00.557+0000 INFO [o.n.k.i.DiagnosticsManager]             index-36: 2022-02-14T11:54:59+0000 - 48.00 kB
+2022-02-14 11:55:00.557+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 48.00 kB
+2022-02-14 11:55:00.557+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2022-02-14 11:55:00.557+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.557+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.557+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2022-02-14T11:50:18+0000 - 184.08 kB
+2022-02-14 11:55:00.557+0000 INFO [o.n.k.i.DiagnosticsManager]         43:
+2022-02-14 11:55:00.558+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2022-02-14 11:55:00.558+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2022-02-14 11:55:00.558+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_v: 2022-02-14T11:50:18+0000 - 85.00 B
+2022-02-14 11:55:00.558+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.558+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2022-02-14T11:50:18+0000 - 85.00 B
+2022-02-14 11:55:00.559+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2022-02-14T11:50:18+0000 - 16.00 kB
+2022-02-14 11:55:00.559+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 16.08 kB
+2022-02-14 11:55:00.559+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2022-02-14 11:55:00.559+0000 INFO [o.n.k.i.DiagnosticsManager]             index-43: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.559+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.559+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2022-02-14 11:55:00.560+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.560+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.560+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2022-02-14 11:55:00.560+0000 INFO [o.n.k.i.DiagnosticsManager]             index-43: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.560+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.560+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2022-02-14 11:55:00.561+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.561+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.561+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2022-02-14T11:50:18+0000 - 176.08 kB
+2022-02-14 11:55:00.561+0000 INFO [o.n.k.i.DiagnosticsManager]         50:
+2022-02-14 11:55:00.561+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2022-02-14 11:55:00.561+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2022-02-14 11:55:00.561+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_v: 2022-02-14T11:50:18+0000 - 85.00 B
+2022-02-14 11:55:00.562+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.562+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2022-02-14T11:50:18+0000 - 85.00 B
+2022-02-14 11:55:00.562+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2022-02-14T11:50:18+0000 - 16.00 kB
+2022-02-14 11:55:00.562+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 16.08 kB
+2022-02-14 11:55:00.562+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2022-02-14 11:55:00.562+0000 INFO [o.n.k.i.DiagnosticsManager]             index-50: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.562+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.563+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2022-02-14 11:55:00.563+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.563+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.563+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2022-02-14 11:55:00.563+0000 INFO [o.n.k.i.DiagnosticsManager]             index-50: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.563+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.563+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2022-02-14 11:55:00.563+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.564+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.564+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2022-02-14T11:50:18+0000 - 176.08 kB
+2022-02-14 11:55:00.564+0000 INFO [o.n.k.i.DiagnosticsManager]         57:
+2022-02-14 11:55:00.564+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2022-02-14 11:55:00.564+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2022-02-14 11:55:00.564+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_u: 2022-02-14T11:50:18+0000 - 85.00 B
+2022-02-14 11:55:00.564+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.564+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2022-02-14T11:50:18+0000 - 85.00 B
+2022-02-14 11:55:00.565+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2022-02-14T11:50:18+0000 - 16.00 kB
+2022-02-14 11:55:00.565+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 16.08 kB
+2022-02-14 11:55:00.565+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2022-02-14 11:55:00.565+0000 INFO [o.n.k.i.DiagnosticsManager]             index-57: 2022-02-14T11:54:59+0000 - 48.00 kB
+2022-02-14 11:55:00.565+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 48.00 kB
+2022-02-14 11:55:00.565+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2022-02-14 11:55:00.566+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.566+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.566+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2022-02-14 11:55:00.566+0000 INFO [o.n.k.i.DiagnosticsManager]             index-57: 2022-02-14T11:54:59+0000 - 48.00 kB
+2022-02-14 11:55:00.567+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 48.00 kB
+2022-02-14 11:55:00.567+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2022-02-14 11:55:00.567+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.567+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.567+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2022-02-14T11:50:18+0000 - 192.08 kB
+2022-02-14 11:55:00.568+0000 INFO [o.n.k.i.DiagnosticsManager]         8:
+2022-02-14 11:55:00.568+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2022-02-14 11:55:00.568+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2022-02-14 11:55:00.568+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1k: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.568+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.568+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2022-02-14T11:50:18+0000 - 86.00 B
+2022-02-14 11:55:00.569+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2022-02-14T11:50:18+0000 - 16.00 kB
+2022-02-14 11:55:00.569+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 16.08 kB
+2022-02-14 11:55:00.569+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2022-02-14 11:55:00.569+0000 INFO [o.n.k.i.DiagnosticsManager]             index-8: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.569+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.569+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2022-02-14 11:55:00.570+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.570+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.570+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2022-02-14 11:55:00.570+0000 INFO [o.n.k.i.DiagnosticsManager]             index-8: 2022-02-14T11:54:59+0000 - 48.00 kB
+2022-02-14 11:55:00.570+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 48.00 kB
+2022-02-14 11:55:00.570+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2022-02-14 11:55:00.571+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2022-02-14T11:54:59+0000 - 40.00 kB
+2022-02-14 11:55:00.571+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2022-02-14T11:50:18+0000 - 40.00 kB
+2022-02-14 11:55:00.571+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2022-02-14T11:50:18+0000 - 184.08 kB
+2022-02-14 11:55:00.572+0000 INFO [o.n.k.i.DiagnosticsManager]       - Total: 2022-02-14T11:50:18+0000 - 1.61 MB
+2022-02-14 11:55:00.572+0000 INFO [o.n.k.i.DiagnosticsManager]     - Total: 2022-02-14T11:50:18+0000 - 1.61 MB
+2022-02-14 11:55:00.572+0000 INFO [o.n.k.i.DiagnosticsManager]   - Total: 2022-02-14T11:50:18+0000 - 1.61 MB
+2022-02-14 11:55:00.572+0000 INFO [o.n.k.i.DiagnosticsManager]   store_lock: 2022-02-14T11:50:18+0000 - 0.00 B
+2022-02-14 11:55:00.572+0000 INFO [o.n.k.i.DiagnosticsManager] Storage summary: 
+2022-02-14 11:55:00.572+0000 INFO [o.n.k.i.DiagnosticsManager]   Total size of store: 2.14 MB
+2022-02-14 11:55:00.573+0000 INFO [o.n.k.i.DiagnosticsManager]   Total size of mapped files: 175.90 kB
+2022-02-14 11:55:00.573+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2022-02-14 11:55:02.765+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED START ---
+2022-02-14 11:55:03.611+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED END ---
