@@ -1,4 +1,4 @@
-# Taxomap
+[#](#) Taxomap
 
 ## Overview
 Taxomap (Taxonomy Mapper) is a lightweight rails app that allows you to create custom
@@ -17,7 +17,7 @@ Taxomap has 4 first class concepts:
   - Values
   - Properties
 
-**Concepts** are the primary containers for any distinct think of which you wish
+`Concepts` are the primary containers for any distinct think of which you wish
 to make a note or record. They must themselves have a parent concept with the ultimate
 parent Concept being _Concept_ itself. Direct children of _Concept_ are _Abstract Concept_
 and _Concrete Object_
@@ -45,6 +45,4 @@ Each Concept can also have any number of links to other Concepts. This is the ke
 brings a richness to our datamodel. Linking Concepts properly is what will allow us to create queries
 that otherwise would not be possible with a typical RDBMS.
 
-head to `localhost:7474` to access the Neo4j viewer to see the graph model of your created concepts.
-
-
+Head to `localhost:7474` to access the Neo4j viewer to see the graph model of your created concepts.
